@@ -1,18 +1,18 @@
-# Janamot (জনমত) — Bangladesh Civic Transparency Hub 🇧🇩
+# Jonomot (জনমত) — Bangladesh Civic Transparency Hub 🇧🇩
 *A civic transparency hub made for Bangladeshi citizens*
 
-A modern, responsive civic transparency web application built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Prisma (with SQLite for local development)**. Designed using the **Stitch MCP "Civic Minimalism"** design system.
+A modern, responsive civic transparency web application built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Prisma (with SQLite for local development)** later implemented using supabase for authentication and cloudinary for video and picture storage. Designed using the **Stitch** design system.
 
 ---
 
 ## 🚀 Quick Start Guide
 
-### 1. Do I need to install SQLite?
+### 1. Do You need to install SQLite?
 **No!** You do **not** need to install any separate database software or SQLite server on your computer.
 - SQLite is file-based and is managed automatically by Prisma.
 - Your database is stored locally in `prisma/dev.db`.
 
-### 2. What other things do I need to do to run this locally?
+### 2. What other things do you need to do to run this locally?
 All dependencies and files are already set up in this directory! To launch your application locally, follow these 3 simple steps in your terminal:
 
 ```bash
@@ -35,7 +35,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser!
 
 ## 🎨 Design System & Customization
 
-This project follows the **Stitch Civic Minimalism** design system defined in [`DESIGN.md`](./DESIGN.md). The codebase is architected with modular, reusable components so you can easily change logos, colors, or add features later:
+This project follows the **Stitch** design system defined in [`DESIGN.md`](./DESIGN.md). The codebase is architected with modular, reusable components so you can easily change logos, colors, or add features later:
 
 ### How to change the Logo & Brand Name:
 - Edit [`components/common/BrandLogo.tsx`](./components/common/BrandLogo.tsx).
@@ -92,8 +92,33 @@ This project follows the **Stitch Civic Minimalism** design system defined in [`
 
 ## 🌟 Key Features Included
 
-1. **Stitch Civic Minimalism UI**: Impactful Deep Forest Green hero section, full-pill search bars, and subtle card hover elevations.
-2. **Division & Category Filters**: Search government offices across Dhaka, Chattogram, Sylhet, and 6 service departments.
-3. **Required Documents Checklists**: Built-in checklists for Passport Renewal, Driving Licenses, and Trade Licenses so citizens arrive prepared.
-4. **Interactive Demo Role Switcher**: Click the **"Citizen / Admin"** toggle button in the top right of the navigation bar to switch between standard Citizen view and Moderator view seamlessly.
-5. **Verified Visits**: Support for document/photo attachment preview when submitting service feedback.
+1. **Stitch Civic UI**: Impactful Deep Forest Green section, full-pill search bars, and subtle card hover elevations.
+2. **Subtle Fist Animation**: to show the unity that july brought to us.
+3. **Division & Category Filters**: Search government offices across Dhaka, Chattogram, Sylhet, and 6 service departments.
+4. **Required Documents Checklists**: Built-in/modifieable checklists for Passport Renewal, Driving Licenses, Trade Licenses and others so citizens arrive prepared.
+5. **Interactive Demo Role Switcher**: Click the **"Citizen / Admin"** toggle button in the top right of the navigation bar to switch between standard Citizen view and Moderator view seamlessly.
+6. **Verified Visits**: Support for document/photo attachment preview when submitting service feedback.
+
+## V2 Roadmap (Post-Hackathon)
+
+These features are **not in the current build**. They're planned for future development.
+
+### AI-Powered Features
+- AI-generated institution summaries synthesized from community reports
+- AI busy-hours extraction from report text
+- AI moderation-assist classifier for spam/offensive content
+- AI trend analysis and predictive insights (wait-time forecasting)
+- AI duplicate-institution detection
+- AI smart categorization suggestions
+- AI-assisted video review for moderators
+
+### Institution Response System
+- Verified institution accounts that can officially reply to citizen reports
+- Response Rate, Average Response Time, Resolution Rate metrics
+- "Official Responses" count feeding into Most Active rankings
+
+### Platform Expansion
+- Mobile app (React Native)
+- SMS-based reporting for low-connectivity areas
+- Public API for researchers and journalists
+
