@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Institution - Jonomot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-surface": "#121c2a",
+                      "inverse-primary": "#95d3ba",
+                      "surface": "#f9f9ff",
+                      "secondary": "#b80938",
+                      "on-tertiary-container": "#b0b2b3",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#2b6954",
+                      "surface-container": "#e6eeff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#80bea6",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "on-background": "#121c2a",
+                      "primary-container": "#064e3b",
+                      "on-secondary-fixed": "#40000d",
+                      "on-primary-fixed": "#002117",
+                      "tertiary-container": "#424546",
+                      "outline": "#707974",
+                      "tertiary": "#2c2f30",
+                      "surface-variant": "#d9e3f7",
+                      "surface-dim": "#d0daef",
+                      "surface-bright": "#f9f9ff",
+                      "outline-variant": "#bfc9c3",
+                      "on-secondary-fixed-variant": "#920029",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#eff3ff",
+                      "primary-fixed-dim": "#95d3ba",
+                      "background": "#f9f9ff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "on-tertiary-fixed": "#191c1d",
+                      "primary": "#003527",
+                      "primary-fixed": "#b0f0d6",
+                      "secondary-fixed": "#ffdadb",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "inverse-surface": "#273140",
+                      "surface-container-highest": "#d9e3f7",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#dee9fd",
+                      "on-secondary-container": "#fffbff",
+                      "tertiary-fixed": "#e1e3e4",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "secondary-container": "#db2e4e",
+                      "on-surface-variant": "#404944",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter-grid": "1.5rem",
+                      "margin-page": "2rem",
+                      "stack-lg": "2rem",
+                      "stack-md": "1rem",
+                      "stack-sm": "0.5rem"
+              },
+              "fontFamily": {
+                      "label-sm": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-xl": ["Hanken Grotesk"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-24 md:pb-0 md:pl-[280px]">
+<!-- Sidebar Navigation (Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 p-stack-md w-[280px] bg-surface-container-low dark:bg-inverse-surface border-r border-outline-variant dark:border-outline z-40">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" data-weight="fill">account_balance</span>
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary dark:text-inverse-primary leading-none">Citizen Portal</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Transparency in Action</p>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg bg-primary-container text-on-primary-container font-bold text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined fill" data-weight="fill">account_balance</span>
+                Institutions
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined">forum</span>
+                Public Feed
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined">map</span>
+                Map View
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                Leaderboard
+            </a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors text-label-sm font-label-sm mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg text-label-sm font-label-sm font-bold shadow-md hover:bg-primary-fixed-dim transition-colors">
+            Submit Report
+        </button>
+<div class="mt-8 border-t border-outline-variant pt-4 flex flex-col gap-2">
+<a class="flex items-center gap-2 text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">info</span> About Jonomot
+            </a>
+<a class="flex items-center gap-2 text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">help</span> Help &amp; Support
+            </a>
+</div>
+</nav>
+<!-- Top App Bar (Mobile & Desktop) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-4 md:px-margin-page h-16 bg-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-2 lg:hidden">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">Jonomot</span>
+</div>
+<div class="hidden lg:flex items-center gap-2">
+<h2 class="text-headline-md font-headline-md font-bold text-on-surface">Add Institution</h2>
+</div>
+<div class="flex items-center gap-2 text-primary dark:text-inverse-primary">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-3xl mx-auto px-4 md:px-margin-page py-6">
+<div class="mb-8">
+<h1 class="text-headline-lg font-headline-lg text-on-surface mb-2">নতুন প্রতিষ্ঠান যুক্ত করুন</h1>
+<p class="text-body-md font-body-md text-on-surface-variant">Suggest a new office or institution for the civic directory.</p>
+</div>
+<form class="space-y-6 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm">
+<!-- Warning Banner -->
+<div class="flex items-start gap-3 p-4 bg-surface-container-high rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface font-bold">এই তথ্য যাচাই করা হবে</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">This information will be verified by moderators before appearing publicly.</p>
+</div>
+</div>
+<!-- Name Fields -->
+<div class="space-y-4">
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="name-bn">প্রতিষ্ঠানের নাম (বাংলা) <span class="text-secondary">*</span></label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-outline">
+<span class="material-symbols-outlined">badge</span>
+</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="name-bn" placeholder="উদাঃ বনানী মডেল স্কুল" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="name-en">Institution Name (English)</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-outline">
+<span class="material-symbols-outlined">translate</span>
+</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="name-en" placeholder="e.g. Banani Model School" type="text"/>
+</div>
+</div>
+</div>
+<!-- Category Chips -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-2">ক্যাটাগরি / Category <span class="text-secondary">*</span></label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-primary-container bg-primary-container text-on-primary-container text-label-sm font-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">school</span> শিক্ষা (Education)
+                    </button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant text-label-sm font-label-sm hover:bg-surface-variant transition-colors" type="button">
+                        স্বাস্থ্য (Health)
+                    </button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant text-label-sm font-label-sm hover:bg-surface-variant transition-colors" type="button">
+                        সরকারি (Government)
+                    </button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant text-label-sm font-label-sm hover:bg-surface-variant transition-colors" type="button">
+                        ব্যাংক (Bank)
+                    </button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant text-label-sm font-label-sm hover:bg-surface-variant transition-colors" type="button">
+                        অন্যান্য (Other)
+                    </button>
+</div>
+</div>
+<!-- Address Field -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="address">ঠিকানা / Address</label>
+<div class="relative">
+<span class="absolute top-3 left-3 flex items-start text-outline">
+<span class="material-symbols-outlined">location_on</span>
+</span>
+<textarea class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="address" placeholder="বিস্তারিত ঠিকানা লিখুন..." rows="3"></textarea>
+</div>
+</div>
+<!-- Draggable Map Pin Section -->
+<div class="border border-outline-variant rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 z-10 bg-primary/5 group-hover:bg-transparent transition-colors pointer-events-none flex items-center justify-center">
+<div class="bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md text-label-sm font-label-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">touch_app</span>
+                        পিনটি সঠিক স্থানে টেনে নিন (Drag to adjust pin)
+                    </div>
+</div>
+<!-- Fake map placeholder -->
+<div class="h-64 bg-surface-dim relative w-full" data-alt="A top-down digital map view of a modern city layout with distinct roads and green spaces, minimal cartographic aesthetic, soft neutral tones with subtle green accents, clean civic interface style, highly legible." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBj742NKjszQdVklAZlgIYYdkA5H13yLcaeuQwjKS3gYfvzRZw3XHTFAe32L4hiVegTd6gX2uaYo2EA0kMNNY7-wDMmFJ_pUE-4VHFP8O2f8HsNJcPFTy04o2i5jxEdx-0PRAXBS-dU7q7EdGJ5Xh46qOeu8KApYaSvPBT9c1WSXi3U2MaTXRg943m7FgUBhTXxjC-s1CYbdYHE0GC4WJuHnIx6svC97UWhn-91CbzpwFS5ldSq5H5ouMWrS6i5lSYgXAER38tQl60')">
+<!-- The Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full z-20 cursor-grab active:cursor-grabbing hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary drop-shadow-md fill" data-weight="fill">location_on</span>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 flex flex-col sm:flex-row gap-4">
+<button class="w-full sm:w-auto px-6 py-3 rounded-lg border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors" type="button">
+                    বাতিল (Cancel)
+                </button>
+<button class="w-full sm:flex-1 px-6 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold font-label-sm text-label-sm shadow-sm hover:bg-primary-fixed-dim transition-colors flex justify-center items-center gap-2" type="submit">
+<span class="material-symbols-outlined">add_circle</span>
+                    যুক্ত করুন (Submit)
+                </button>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-surface/90 backdrop-blur-md shadow-sm border-t border-outline-variant dark:border-outline rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[12px] font-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 shadow-sm active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined fill" data-weight="fill">search</span>
+<span class="text-[12px] font-label-sm mt-1 font-bold">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-[12px] font-label-sm mt-1">Report</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[12px] font-label-sm mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[12px] font-label-sm mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

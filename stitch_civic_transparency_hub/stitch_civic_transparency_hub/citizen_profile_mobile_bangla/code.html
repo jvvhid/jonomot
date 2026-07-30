@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#d9e3f7",
+                      "outline-variant": "#bfc9c3",
+                      "surface-dim": "#d0daef",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "background": "#f9f9ff",
+                      "inverse-surface": "#273140",
+                      "surface-container-highest": "#d9e3f7",
+                      "tertiary-container": "#424546",
+                      "on-primary-fixed": "#002117",
+                      "outline": "#707974",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "inverse-primary": "#95d3ba",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "on-primary-container": "#80bea6",
+                      "tertiary-fixed": "#e1e3e4",
+                      "primary-fixed": "#b0f0d6",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "secondary-fixed": "#ffdadb",
+                      "secondary": "#b80938",
+                      "on-secondary-fixed-variant": "#920029",
+                      "on-surface": "#121c2a",
+                      "on-secondary-fixed": "#40000d",
+                      "on-secondary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#2b6954",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "tertiary": "#2c2f30",
+                      "on-error": "#ffffff",
+                      "on-background": "#121c2a",
+                      "primary-container": "#064e3b",
+                      "surface": "#f9f9ff",
+                      "secondary-container": "#db2e4e",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary-fixed": "#191c1d",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#eff3ff",
+                      "on-surface-variant": "#404944",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#e6eeff",
+                      "primary": "#003527",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#dee9fd",
+                      "primary-fixed-dim": "#95d3ba",
+                      "on-tertiary-container": "#b0b2b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter-grid": "1.5rem",
+                      "stack-lg": "2rem",
+                      "margin-page": "2rem",
+                      "stack-md": "1rem",
+                      "stack-sm": "0.5rem"
+              },
+              "fontFamily": {
+                      "label-sm": ["Hanken Grotesk"],
+                      "headline-xl": ["Hanken Grotesk"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
+        /* Hide scrollbar for a cleaner mobile app feel */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex justify-center">
+<!-- Mobile Container Wrapper -->
+<div class="w-full max-w-md bg-surface relative shadow-xl overflow-hidden min-h-screen flex flex-col">
+<!-- TopAppBar (From JSON) -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant bg-surface flex justify-between items-center px-4 h-16 max-w-md mx-auto" style="left: 50%; transform: translateX(-50%);">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">Jonomot</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:text-primary transition-colors active:opacity-80 transition-opacity relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-20 pb-24 px-4 scroll-smooth">
+<!-- User Profile Header Section -->
+<section class="flex flex-col items-center mt-4">
+<div class="relative">
+<img class="w-24 h-24 rounded-full object-cover border-2 border-outline-variant shadow-sm" data-alt="A highly detailed close-up portrait of a modern Bangladeshi citizen, looking confident and determined. Shot in soft, natural lighting against a minimal light-mode urban background. The aesthetic is clean, civic-minded, and professional, utilizing subtle warm tones that contrast gently with the deep forest green branding of the interface. High resolution, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDd7rULFqls0pyOR0VsBwPU8xBEnKVbT__K5KxbLMvjoM9yqjGwE6vmOsU_-2NXje7lwWLNkBGoruuYlPf06681LLb_g_hhxY8ZNcU-3KsHrunqyuJZTQJdDAMTu_WoPTyu2bhz7P23ZtysNK-hiGxUywsOMGxkrHhFdWpFArU3IW24CVMDAT5VBHI2UKCjANetLnMk7fKzwTJxaALsP_kh98kS1XH0ZPdjrlWa5R2rpv0M0j1QicaqybXm-TZHPmnayziM37VoQQ"/>
+<button class="absolute bottom-0 right-0 bg-primary-container text-on-primary-container p-1.5 rounded-full shadow-sm hover:opacity-90">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">edit</span>
+</button>
+</div>
+<h1 class="font-headline-md text-headline-md mt-3 text-on-surface">আরিফ রহমান</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                    Dhaka South City Corporation
+                </p>
+<div class="mt-4 flex gap-2">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">ভেরিফাইড সিটিজেন</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">র‍্যাংক: সিলভার</span>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-3 mt-8">
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between items-start border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">মোট রিপোর্ট</p>
+<p class="font-headline-lg text-headline-lg text-on-surface mt-1">৩৪</p>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between items-start border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">সমর্থন পেয়েছেন</p>
+<p class="font-headline-lg text-headline-lg text-on-surface mt-1">১২৮</p>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between items-start border border-outline-variant shadow-sm col-span-2 flex-row items-center">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">প্রভাব স্কোর</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">৭৬%</span>
+<span class="font-body-md text-body-md text-secondary">+৫% এই মাসে</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl opacity-20 ml-auto">monitoring</span>
+</div>
+</section>
+<!-- Reports List Section -->
+<section class="mt-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">আমার রিপোর্টসমূহ</h2>
+<button class="font-label-sm text-label-sm text-primary hover:underline">সব দেখুন</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Report Card 1 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-4 flex gap-4 shadow-sm active:scale-[0.98] transition-transform">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="A well-composed architectural photograph of a modern government hospital facade in Dhaka during daytime. The building is clean, featuring minimalist concrete and glass design elements. Bright, natural sunlight casts sharp shadows, emphasizing transparency and civic infrastructure. The image embodies a modern, light-mode institutional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpLgdt7vo4_vjhUtXbcA3shfVCu1sVbxvU7TYPyOBLAFD200Yw4RQxYo8rIATzRB6YxaIhYxZX5161JxMSXzb_218DRVYIK3c6j2WkmI2xNB29il5W7Y7C7iB33TWwz5ZXDRCUFTSeIoGYxzgFml8ma3TQ8bUY0UCW9RowdSNx5BIzpioq1rzx1Y6DgsvlTdj4PcKvQMI-LaopD7o_eFQal6wtIip4Zq0d5PZpnBYQHsntipRyOACDKzDif_N80V9IVWIEqHMol1E"/>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-secondary bg-error-container px-2 py-0.5 rounded uppercase tracking-wide">পেন্ডিং</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-1 line-clamp-2">Dhaka Medical College Hospital - Outpatient Delay</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Health Ministry • 12 Oct</p>
+</div>
+</div>
+</div>
+<!-- Report Card 2 -->
+<div class="bg-surface rounded-xl border border-outline-variant p-4 flex gap-4 shadow-sm active:scale-[0.98] transition-transform">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="A clean, minimalist photo of a newly repaired urban road with fresh white lane markings. The asphalt is smooth and dark, contrasting beautifully with the bright white lines. The shot is taken from a low angle under clear daylight, evoking a sense of progress, civic maintenance, and reliable infrastructure within a bright, modern interface context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt1kAr3c5tbBe1qRMFquW_TJsxRr84EfoQqg-_BH5B1DPOh4Q6XMBTSeR4JXPACuLVSRSqDqSksm2Ng-pVvGb_ixGilKhs9LpRcSY9YHanZcCyxY5uHLdXzX0U5neg5zYpIDvhoOmOM1eobsU6PMC_NPNW1ABKAcYYxbT7iyiDpXr_qcrPyUYTQWoI1Oo7_6rn7y8Po5R6f3M6skVFe5deVJDqlg1Brz5s0UjkNvEkDHJ0NhLYnloDWKmftqk7hRJuTlQHFCBJXuE"/>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold text-primary bg-primary-fixed px-2 py-0.5 rounded uppercase tracking-wide">সমাধানকৃত</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface mt-1 line-clamp-2">Mirpur 10 Road Pothole Repair Request</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">City Corporation • 05 Oct</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (From JSON) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant bg-surface shadow-md max-w-md mx-auto" style="left: 50%; transform: translateX(-50%);">
+<div class="flex justify-around items-center w-full px-4 py-3 pb-safe">
+<!-- Feed (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-xl">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span class="font-label-sm text-label-sm mt-1">ফিড</span>
+</button>
+<!-- Leaderboard (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-xl">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-sm text-label-sm mt-1">লিডারবোর্ড</span>
+</button>
+<!-- Reports (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-xl">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-sm text-label-sm mt-1">রিপোর্ট</span>
+</button>
+<!-- Profile (Active) -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-transform duration-150 shadow-sm">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm mt-1 font-bold text-primary">প্রোফাইল</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

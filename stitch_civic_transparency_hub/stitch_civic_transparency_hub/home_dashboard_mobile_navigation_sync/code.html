@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot Mobile Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-fonts">@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+body {
+    font-family: "Hind Siliguri", sans-serif;
+    background-color: #FAFAFA;
+    -webkit-font-smoothing: antialiased
+    }
+.hero-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDlJIEzzS3iz8z0xBY_PlgHK_CGffYjyngBb1tq6nUvaw2VFF9ypdCLKgTiTTNgObZEKkNw5bE-qV1pOzVOGqvzSW-RoNGPGvQszTDWjG4AYYn2qOgLAzy2pSAiNPFw6TMhXvuhFk32WjMxlPc0n-gCs--dbRbAECDssA-JSXo-PG4lHpjotLPQrR1IbOEyLcF3TDhLlGAbvQVqRZM2uPvJxeJ46ZPhs8NiiejDRFQvO3SiwhOMUc8M7EjYl2_2fuDQ5WUKksBG1yY);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none
+    }
+/* Hide scrollbar for horizontal scrolling containers */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }</style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B6E32',
+            secondary: '#1A8744',
+            surface: '#FFFFFF',
+            background: '#F5F7F5',
+            textMain: '#1F2937',
+            textMuted: '#6B7280',
+            border: '#E5E7EB',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-textMain pb-20 relative">
+<!-- Decorative Background -->
+<div class="hero-bg"></div>
+<!-- BEGIN: TopHeader -->
+<header class="bg-surface shadow-sm sticky top-0 z-20 px-4 py-3 flex justify-between items-center relative">
+<div class="flex items-center gap-2">
+<!-- Logo -->
+<img alt="Jonomot Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvQfM5MtEWAyskrEBIzA_Nmhuo_6YuH1q8A9q-HXLKFR7tdsG25Ka3byADJjVHJwox7_LTniU0jW9-SH8ZpwifYEmjE3m8axqQMFICgLfuzbtJT0TVcn_LUmMRxCBR0nnTxMHsS-OzU_sFiLxzVsodg4uxxpMeWdpbEP6ZGy4QS5dH2lNMQevFtpu_8FLjPMkhmDgFl2hinSd75b_Sdlz1PRHRokHRhPhob4qD7lffAIoDp-l1GJWNXRn0"/>
+<div class="flex flex-col leading-tight">
+<span class="font-bold text-xl text-primary tracking-tight">jonomot</span>
+<span class="text-[10px] text-gray-500 font-medium">জনতার মত জনতার জন্য</span>
+</div>
+</div>
+<div class="flex items-center gap-4"><button class="relative text-gray-600 hover:text-primary transition-colors"><i class="fa-regular fa-bell text-xl"></i><span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold border border-white">3</span></button><button class="w-8 h-8 rounded-full overflow-hidden border border-gray-200"><img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHXi58VU4I4wpwdYJ585S-i8OkCLeN90gdKYGyH5mPwcg30tkMibu_3Bj_xrxJDMkPoYp79h5mmG4e6LWQ9SRr3A_peUebocBCclYQB6UK5LDLKAT91eK4ehDbVMjnPvdn7BSFIm10QJEE8A0ECm_HlVDHlZzHOioB9OdX5SAQpIl-bvD7C1qTcBsIkQqdWWqSWFh_aupIghqdIu_Pat-gnvfZizu2X2sCgbzVf6azkIrFpSXgGZ_zYd4oW0ZsHYhsgLlsrYoE8s"/></button></div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: MainContent -->
+<main class="relative z-10 px-4 py-4 space-y-6">
+<!-- Search Section -->
+<section data-purpose="search-bar">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+</div>
+<input class="block w-full pl-10 pr-10 py-3 border border-border rounded-full bg-surface text-sm focus:ring-primary focus:border-primary shadow-sm placeholder-gray-400" placeholder="প্রতিষ্ঠান, সেবা, অফিস খুঁজুন..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+<button class="text-gray-400 hover:text-primary">
+<i class="fa-solid fa-filter"></i>
+</button>
+</div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="text-center py-6" data-purpose="hero-section">
+<h1 class="text-3xl font-bold leading-tight mb-3">
+<span class="text-textMain block">আপনার অভিজ্ঞতা</span>
+<span class="text-primary block">পরিবর্তন আনতে পারে</span>
+</h1>
+<div class="flex justify-center gap-1 mb-4">
+<div class="w-6 h-1 bg-primary rounded-full"></div>
+<div class="w-6 h-1 bg-red-500 rounded-full"></div>
+</div>
+<p class="text-textMuted text-sm mb-6 max-w-[280px] mx-auto">
+        সরকারি সেবা সম্পর্কে জানুন, অভিজ্ঞতা শেয়ার করুন, আর গড়ে তুলুন একটি স্বচ্ছ ও জবাবদিহিমূলক বাংলাদেশ।
+      </p>
+<div class="flex flex-col gap-3 sm:flex-row justify-center px-4">
+<button class="bg-primary hover:bg-secondary text-white font-medium py-3 px-6 rounded-full flex items-center justify-center gap-2 shadow-md transition-all">
+<i class="fa-solid fa-magnifying-glass"></i>
+          প্রতিষ্ঠান খুঁজুন
+        </button>
+<button class="bg-white hover:bg-gray-50 text-textMain border border-gray-300 font-medium py-3 px-6 rounded-full flex items-center justify-center gap-2 shadow-sm transition-all">
+<i class="fa-regular fa-pen-to-square"></i>
+          অভিজ্ঞতা শেয়ার করুন
+        </button>
+</div>
+</section>
+<!-- Popular Categories -->
+<section class="pt-4" data-purpose="popular-categories">
+<h2 class="text-lg font-bold mb-4 text-textMain px-1">জনপ্রিয় বিভাগসমূহ</h2>
+<div class="flex overflow-x-auto hide-scrollbar gap-3 pb-2 px-1">
+<!-- Category 1 -->
+<a class="flex-shrink-0 flex items-center gap-3 bg-surface border border-gray-100 p-3 rounded-xl shadow-sm min-w-[140px]" href="#">
+<div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center text-primary">
+<i class="fa-solid fa-building-columns text-lg"></i>
+</div>
+<span class="text-sm font-medium">সরকারি অফিস</span>
+</a>
+<!-- Category 2 -->
+<a class="flex-shrink-0 flex items-center gap-3 bg-surface border border-gray-100 p-3 rounded-xl shadow-sm min-w-[160px]" href="#">
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+<i class="fa-solid fa-shield-halved text-lg"></i>
+</div>
+<span class="text-sm font-medium">পুলিশ ও আইনশৃঙ্খলা</span>
+</a>
+<!-- Category 3 -->
+<a class="flex-shrink-0 flex items-center gap-3 bg-surface border border-gray-100 p-3 rounded-xl shadow-sm min-w-[140px]" href="#">
+<div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center text-orange-500">
+<i class="fa-solid fa-id-card text-lg"></i>
+</div>
+<span class="text-sm font-medium">পাসপোর্ট</span>
+</a>
+<!-- Category 4 -->
+<a class="flex-shrink-0 flex items-center gap-3 bg-surface border border-gray-100 p-3 rounded-xl shadow-sm min-w-[150px]" href="#">
+<div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
+<i class="fa-regular fa-hospital text-lg"></i>
+</div>
+<span class="text-sm font-medium">হাসপাতাল</span>
+</a>
+</div>
+</section>
+<!-- Popular Institutions -->
+<section class="pt-4" data-purpose="popular-institutions">
+<div class="flex justify-between items-center mb-4 px-1"><h2 class="text-lg font-bold text-textMain">জনপ্রিয় প্রতিষ্ঠানসমূহ</h2><a class="text-sm text-primary font-medium flex items-center gap-1" href="#">সব দেখুন <i class="fa-solid fa-chevron-right text-xs"></i></a></div>
+<div class="flex flex-col gap-4"><h2 class="text-lg font-bold text-textMain">জনপ্রিয় প্রতিষ্ঠানসমূহ</h2><a class="text-sm text-primary font-medium flex items-center gap-1" href="#">সব দেখুন <i class="fa-solid fa-chevron-right text-xs"></i></a></div>
+</section>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: BottomNavigation -->
+<nav class="fixed bottom-0 w-full bg-surface border-t border-gray-200 z-50 pb-safe">
+<div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center w-full h-full text-primary" href="#"><i class="fa-solid fa-house text-xl mb-1"></i><span class="text-[10px] font-medium">হোম</span></a><a class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-primary transition-colors" href="#"><i class="fa-regular fa-newspaper text-xl mb-1"></i><span class="text-[10px] font-medium">ফিড</span></a><a class="flex flex-col items-center justify-center w-full h-full" href="#"><div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg mb-1"><i class="fa-solid fa-plus text-xl"></i></div><span class="text-[10px] font-medium text-gray-400">রিপোর্ট</span></a><a class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-primary transition-colors" href="#"><i class="fa-solid fa-trophy text-xl mb-1"></i><span class="text-[10px] font-medium">লিডারবোর্ড</span></a><a class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-primary transition-colors" href="#"><i class="fa-regular fa-user text-xl mb-1"></i><span class="text-[10px] font-medium">প্রোফাইল</span></a></div>
+</nav>
+<!-- END: BottomNavigation -->
+<style data-purpose="safe-area">
+    /* For iOS safe area at the bottom */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  </style>
+</body></html>

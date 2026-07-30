@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Report - Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#b0f0d6",
+                    "surface-container": "#e6eeff",
+                    "surface-bright": "#f9f9ff",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#2c2f30",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-container": "#b0b2b3",
+                    "on-primary-container": "#80bea6",
+                    "background": "#f9f9ff",
+                    "surface-tint": "#2b6954",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d9e3f7",
+                    "on-secondary-fixed-variant": "#920029",
+                    "on-surface": "#121c2a",
+                    "outline": "#707974",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#273140",
+                    "on-surface-variant": "#404944",
+                    "tertiary-container": "#424546",
+                    "on-primary-fixed": "#002117",
+                    "outline-variant": "#bfc9c3",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdadb",
+                    "on-secondary-fixed": "#40000d",
+                    "surface-dim": "#d0daef",
+                    "primary-container": "#064e3b",
+                    "tertiary-fixed": "#e1e3e4",
+                    "surface-variant": "#d9e3f7",
+                    "on-tertiary-fixed": "#191c1d",
+                    "primary-fixed-dim": "#95d3ba",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb2b7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff3ff",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#db2e4e",
+                    "surface-container-high": "#dee9fd",
+                    "secondary": "#b80938",
+                    "on-secondary-container": "#fffbff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary": "#003527",
+                    "on-background": "#121c2a",
+                    "inverse-primary": "#95d3ba",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#0b513d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "gutter-grid": "1.5rem",
+                    "margin-page": "2rem",
+                    "stack-md": "1rem",
+                    "stack-lg": "2rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex antialiased">
+<!-- Top Navigation (Mobile) - Hidden on Desktop per logic, but shell included for context -->
+<!-- Suppressed on this task-focused transactional page -->
+<!-- Sidebar Navigation (Desktop) - Suppressed on transactional/form page per logic -->
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center min-h-screen p-margin-page bg-surface-dim">
+<div class="w-full max-w-[800px] mx-auto">
+<!-- Header & Progress -->
+<div class="mb-stack-lg">
+<div class="flex items-center gap-4 mb-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                        Back
+                    </button>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-primary mb-2">Report Corruption</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Please provide detailed information about the incident.</p>
+<!-- Progress Bar -->
+<div class="mt-8">
+<div class="flex justify-between items-end mb-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Step 2 of 3</span>
+<span class="text-label-sm font-label-sm font-bold text-primary">Incident Details</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container rounded-full relative">
+<!-- Subtle shimmer effect -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Card -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-md p-stack-lg relative overflow-hidden group">
+<!-- Subtle background pattern or texture could go here -->
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none transition-opacity group-hover:opacity-10 duration-500">
+<span class="material-symbols-outlined text-[120px]">policy</span>
+</div>
+<form class="space-y-stack-md relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-grid">
+<!-- Date Field -->
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant" for="incident-date">Date of Incident *</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#9CA3AF]">calendar_today</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm" id="incident-date" name="incident-date" required="" type="date"/>
+</div>
+</div>
+<!-- Location Field -->
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant" for="incident-location">Location/Office *</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#9CA3AF]">location_on</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder:text-[#9CA3AF]" id="incident-location" name="incident-location" placeholder="e.g., City Hall, Dept of Revenue" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Description Field -->
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant flex justify-between items-baseline" for="incident-description">
+<span>Detailed Description *</span>
+<span class="text-xs text-[#9CA3AF] font-normal">Min 50 words</span>
+</label>
+<textarea class="w-full p-4 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm resize-y placeholder:text-[#9CA3AF]" id="incident-description" name="incident-description" placeholder="Describe the incident clearly. Include names, exact events, and any relevant context..." required="" rows="5"></textarea>
+</div>
+<!-- Upload Area -->
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Upload Attachments (Optional)</label>
+<p class="text-sm text-[#9CA3AF] mb-2">Photos, documents, or audio files supporting your report.</p>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-8 flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group/upload">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-4 group-hover/upload:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-[32px]">upload_file</span>
+</div>
+<span class="text-body-md font-body-md text-primary font-medium mb-1">Click to upload or drag and drop</span>
+<span class="text-sm text-on-surface-variant">SVG, PNG, JPG or PDF (max. 10MB)</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-stack-md flex justify-end gap-4 mt-8 border-t border-outline-variant pt-6">
+<button class="px-6 py-3 text-label-sm font-label-sm text-primary hover:bg-surface-container rounded-lg transition-colors" type="button">
+                            Cancel
+                        </button>
+<button class="px-8 py-3 bg-[#064E3B] text-white rounded-lg text-label-sm font-label-sm font-semibold hover:bg-primary transition-colors shadow-md hover:shadow-lg flex items-center gap-2" type="submit">
+<span>Continue to Step 3</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<div class="mt-8 flex items-center justify-center gap-2 text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="text-xs font-label-sm">Your submission is encrypted and secure.</span>
+</div>
+</div>
+</main>
+<style>
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</body></html>

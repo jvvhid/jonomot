@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>জনমত - প্রতিষ্ঠান প্রোফাইল</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#b0f0d6",
+                      "surface-container": "#e6eeff",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#2c2f30",
+                      "surface": "#f9f9ff",
+                      "on-tertiary-container": "#b0b2b3",
+                      "on-primary-container": "#80bea6",
+                      "background": "#f9f9ff",
+                      "surface-tint": "#2b6954",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#d9e3f7",
+                      "on-secondary-fixed-variant": "#920029",
+                      "on-surface": "#121c2a",
+                      "outline": "#707974",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#273140",
+                      "on-surface-variant": "#404944",
+                      "tertiary-container": "#424546",
+                      "on-primary-fixed": "#002117",
+                      "outline-variant": "#bfc9c3",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#ffdadb",
+                      "on-secondary-fixed": "#40000d",
+                      "surface-dim": "#d0daef",
+                      "primary-container": "#064e3b",
+                      "tertiary-fixed": "#e1e3e4",
+                      "surface-variant": "#d9e3f7",
+                      "on-tertiary-fixed": "#191c1d",
+                      "primary-fixed-dim": "#95d3ba",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#eff3ff",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#db2e4e",
+                      "surface-container-high": "#dee9fd",
+                      "secondary": "#b80938",
+                      "on-secondary-container": "#fffbff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "primary": "#003527",
+                      "on-background": "#121c2a",
+                      "inverse-primary": "#95d3ba",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#0b513d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "gutter-grid": "1.5rem",
+                      "margin-page": "2rem",
+                      "stack-md": "1rem",
+                      "stack-lg": "2rem"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased pb-[80px]">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-4 md:px-margin-page h-16 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
+<div class="text-headline-md font-headline-md font-bold text-primary">জনমত</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined hover:bg-surface-container rounded-full p-2 transition-colors cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined hover:bg-surface-container rounded-full p-2 transition-colors cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-3xl mx-auto w-full px-4 pt-stack-lg pb-stack-lg flex flex-col gap-stack-lg">
+<!-- Institution Header -->
+<section class="flex flex-col items-center text-center gap-stack-sm mt-stack-md">
+<img class="w-32 h-32 rounded-xl object-cover mb-2 border border-outline-variant shadow-sm" data-alt="A highly professional and clean architectural photograph of the main entrance to Dhaka Medical College Hospital in Bangladesh. The building is captured in soft, bright daylight under a clear sky. The overall image has a modern, clinical, and slightly cool-toned aesthetic, fitting a civic transparency app. No crowds, just the building structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmgohfuXcVuzmo6wUp9YPTppP0lFuUEE_V0SvLpp3bw8t-mSlZco7W4eqnWraSkELAhoqvbXguwfhKAmNTW31HUbYTn40P_twlcZKCfw7pLI_FWlalwEg8CHi9g9Y9HD6Wardk7rehM9Yuu_f8akQgf_y-I3w7cGUianSU_Hehb8fG0WIcJk08NZBz634DTUTvehmC8NA4zw5InA9yZ6sFxLrV9lV3V2z5evbSYrOL-R6lgnzv_wQao2cbSXLlxciZAWbwK4AJ3-4"/>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Dhaka Medical College Hospital</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span>
+                Secretariat Road, Dhaka</p>
+<div class="flex items-center gap-2 mt-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">৩.৮ / ৫.০</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2">(১,২৪৫টি রিপোর্ট)</span>
+</div>
+</section>
+<!-- High Level Stats (Bento Grid) -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">অপেক্ষার সময়</span>
+<span class="material-symbols-outlined text-primary-fixed-dim">schedule</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">৪৫ মিনিট</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                    +১২% এই সপ্তাহে
+                </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">কর্মীদের আচরণ</span>
+<span class="material-symbols-outlined text-primary-fixed-dim">psychology</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">৪.২/৫</div>
+<div class="font-label-sm text-label-sm text-primary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+                    স্থিতিশীল
+                </div>
+</div>
+<div class="col-span-2 bg-surface-container-low border border-outline-variant rounded-xl p-4 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">শীর্ষ অভিযোগের বিভাগ</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-error">warning</span>
+                        স্যানিটেশন এবং পরিচ্ছন্নতা
+                     </div>
+</div>
+<button class="bg-surface border border-primary-container text-primary-container px-4 py-2 rounded-lg font-label-sm text-label-sm hover:bg-surface-container transition-colors">ডেটা দেখুন</button>
+</div>
+</section><section class="flex flex-col gap-4 mt-stack-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant pb-2">প্রয়োজনীয় কাগজপত্র (Required Documents)</h2>
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-4">
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-body-md text-body-md">মূল জাতীয় পরিচয়পত্র (Original NID)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-body-md text-body-md">জন্ম নিবন্ধন সনদ (Birth Certificate)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-body-md text-body-md">পাসপোর্ট সাইজের ছবি (Passport Photos)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span>
+<span class="font-body-md text-body-md">পূর্ববর্তী মেডিকেল রিপোর্ট (Previous Medical Reports)</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Latest Feedback List -->
+<section class="flex flex-col gap-4 mt-stack-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant pb-2">সাম্প্রতিক নাগরিকদের রিপোর্ট</h2>
+<!-- Feedback Item 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-label-sm">RA</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">রহিম এ.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant text-[12px]">২ ঘন্টা আগে</div>
+</div>
+</div>
+<div class="flex items-center bg-surface-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">"আজ জরুরি বিভাগে ডাক্তাররা খুব দ্রুত ছিলেন, কিন্তু অপেক্ষার জায়গাটি খুব ভিড় ছিল এবং বসার জায়গার অভাব ছিল। প্রবেশপথে আরও ভাল ব্যবস্থাপনা প্রয়োজন।"</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant rounded font-label-sm text-[12px] border border-outline-variant">জরুরি বিভাগ</span>
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant rounded font-label-sm text-[12px] border border-outline-variant">সুযোগ-সুবিধা</span>
+</div>
+</article>
+<!-- Feedback Item 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-label-sm">SJ</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface font-bold">সাদিয়া জে.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant text-[12px]">গতকাল</div>
+</div>
+</div>
+<div class="flex items-center bg-surface-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">"ফার্মাসিতে ওষুধের প্রাপ্যতা ভালো ছিল, বাইরে যেতে হয়নি। ওষুধ দেওয়ার সময় কর্মীরা বিনয়ী ছিলেন।"</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant rounded font-label-sm text-[12px] border border-outline-variant">ফার্মাসি</span>
+<span class="px-2 py-1 bg-surface-container-low text-on-surface-variant rounded font-label-sm text-[12px] border border-outline-variant">কর্মীদের আচরণ</span>
+</div>
+</article>
+</section>
+</main>
+<!-- Floating Action Button (FAB) -->
+<button class="fixed bottom-24 right-4 lg:right-margin-page bg-primary-container text-on-secondary px-4 py-3 rounded-xl shadow-lg flex items-center gap-2 hover:bg-surface-tint transition-colors z-40">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-sm text-label-sm font-bold">রিপোর্ট শেয়ার করুন</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-surface/90 backdrop-blur-md shadow-sm border-t border-outline-variant rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">হোম</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 opacity-80 transition-opacity duration-150 scale-90 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-sm text-label-sm">ডিরেক্টরি</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-sm text-label-sm">রিপোর্ট</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+<span class="font-label-sm text-label-sm">ফিড</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">প্রোফাইল</span>
+</a>
+</nav>
+</body></html>

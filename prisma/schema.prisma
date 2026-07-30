@@ -1,0 +1,82 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String     @id @default(uuid())
+  name      String
+  email     String     @unique
+  role      String     @default("CITIZEN") // CITIZEN, MODERATOR, ADMIN
+  avatarUrl String?
+  reports   Report[]
+  bookmarks Bookmark[]
+  createdAt DateTime   @default(now())
+}
+
+model Institution {
+  id         String     @id @default(uuid())
+  name       String
+  nameBn     String?
+  address    String
+  category   String
+  division   String
+  district   String
+  trustScore    Float      @default(4.2)
+  jonomotRating Float?     @default(60.0)
+  hours         String?    @default("9:00 AM - 5:00 PM")
+  contact       String?
+  imageUrl      String?
+  googleMapUrl  String?
+  reportCount   Int?       @default(0)
+  verified      Boolean?   @default(true)
+  reports       Report[]
+  bookmarks     Bookmark[]
+  createdAt     DateTime   @default(now())
+}
+
+model Report {
+  id              String       @id @default(uuid())
+  title           String
+  description     String
+  visitDate       String
+  rating          Int
+  status          String       @default("APPROVED") // PENDING, APPROVED, REJECTED
+  upvotes         Int          @default(0)
+  institutionId   String
+  institutionName String?
+  institution     Institution  @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  userId          String?
+  userName        String?
+  userRole        String?      @default("CITIZEN")
+  civicTag        String?
+  verified        Boolean?     @default(false)
+  hasVideoProof   Boolean?     @default(false)
+  photoUrls       String[]     @default([])
+  videoUrl        String?
+  user            User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt       DateTime     @default(now())
+}
+
+model Bookmark {
+  id            String       @id @default(uuid())
+  userId        String
+  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  institutionId String
+  institution   Institution  @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  createdAt     DateTime     @default(now())
+
+  @@unique([userId, institutionId])
+}
+
+model Category {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  icon      String
+  count     Int      @default(0)
+}

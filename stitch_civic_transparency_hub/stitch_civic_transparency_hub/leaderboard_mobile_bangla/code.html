@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - Leaderboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Design System Tokens) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#d9e3f7",
+                    "outline-variant": "#bfc9c3",
+                    "surface-dim": "#d0daef",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "background": "#f9f9ff",
+                    "inverse-surface": "#273140",
+                    "surface-container-highest": "#d9e3f7",
+                    "tertiary-container": "#424546",
+                    "on-primary-fixed": "#002117",
+                    "outline": "#707974",
+                    "secondary-fixed-dim": "#ffb2b7",
+                    "inverse-primary": "#95d3ba",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "on-primary-container": "#80bea6",
+                    "tertiary-fixed": "#e1e3e4",
+                    "primary-fixed": "#b0f0d6",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed": "#ffdadb",
+                    "secondary": "#b80938",
+                    "on-secondary-fixed-variant": "#920029",
+                    "on-surface": "#121c2a",
+                    "on-secondary-fixed": "#40000d",
+                    "on-secondary-container": "#fffbff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#2b6954",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "tertiary": "#2c2f30",
+                    "on-error": "#ffffff",
+                    "on-background": "#121c2a",
+                    "primary-container": "#064e3b",
+                    "surface": "#f9f9ff",
+                    "secondary-container": "#db2e4e",
+                    "surface-bright": "#f9f9ff",
+                    "on-tertiary-fixed": "#191c1d",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#eff3ff",
+                    "on-surface-variant": "#404944",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#e6eeff",
+                    "primary": "#003527",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#dee9fd",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-tertiary-container": "#b0b2b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-grid": "1.5rem",
+                    "stack-lg": "2rem",
+                    "margin-page": "1rem", /* Adjusted for mobile view */
+                    "stack-md": "1rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Base styles mapped to typography pairs */
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .font-headline-lg { font-family: 'Hanken Grotesk', sans-serif; font-size: 32px; line-height: 40px; font-weight: 700; }
+        .text-headline-lg { font-size: 32px; line-height: 40px; font-weight: 700; }
+        
+        .font-headline-md { font-family: 'Hanken Grotesk', sans-serif; font-size: 24px; line-height: 32px; font-weight: 600; }
+        .text-headline-md { font-size: 24px; line-height: 32px; font-weight: 600; }
+        
+        .font-label-sm { font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; line-height: 20px; font-weight: 500; }
+        .text-label-sm { font-size: 14px; line-height: 20px; font-weight: 500; }
+        
+        .font-body-md { font-family: 'Hanken Grotesk', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; }
+        .text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+
+        /* Hide scrollbar for clean mobile feel */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col relative pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-page h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">Jonomot</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Hidden on Mobile, required by JSON rules) -->
+<aside class="hidden lg:flex flex-col gap-stack-md p-6 fixed left-0 top-0 h-screen w-72 bg-surface-container border-r border-outline-variant z-40">
+<div class="mt-16 mb-8">
+<h1 class="font-headline-md text-headline-md font-black text-primary">Jonomot</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Civic Transparency</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">dynamic_feed</span>
+<span class="font-label-sm text-label-sm">Public Feed</span>
+</a>
+<a class="bg-primary text-on-primary rounded-lg px-4 py-3 flex items-center gap-3 active:scale-95 transition-transform shadow-md" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-sm text-label-sm">Leaderboard</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-sm text-label-sm">Reports</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-3 rounded-lg flex justify-center items-center gap-2 hover:opacity-90 transition-opacity shadow-sm">
+<span class="material-symbols-outlined">add</span>
+                নতুন রিপোর্ট
+            </button>
+</div>
+</aside>
+<!-- Main Content (Mobile Focused Layout) -->
+<main class="flex-1 mt-16 w-full lg:pl-72 max-w-7xl mx-auto">
+<!-- Header & Tabs Section -->
+<section class="px-margin-page pt-stack-lg pb-stack-md bg-surface-container-lowest sticky top-16 z-30 border-b border-outline-variant">
+<div class="flex justify-between items-end mb-stack-md">
+<div>
+<h1 class="font-headline-md text-headline-md text-primary font-bold">Top Institutions</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Citizen approval rankings</p>
+</div>
+<button class="p-2 bg-surface-container rounded-full text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<!-- Custom Tab Segment Control -->
+<div class="flex bg-surface-container rounded-lg p-1 w-full relative">
+<!-- Active Indicator (Background) -->
+<div class="absolute left-1 top-1 bottom-1 w-[calc(50%-4px)] bg-surface-container-lowest shadow-sm rounded-md border border-outline-variant transition-transform duration-300" id="tab-indicator"></div>
+<button class="flex-1 py-2 font-label-sm text-label-sm text-primary relative z-10 font-bold" onclick="switchTab(0)">
+                    এই সপ্তাহ
+                </button>
+<button class="flex-1 py-2 font-label-sm text-label-sm text-on-surface-variant relative z-10 hover:text-primary transition-colors" onclick="switchTab(1)">
+                    সব সময়
+                </button>
+</div>
+</section>
+<!-- Leaderboard List -->
+<section class="px-margin-page py-stack-md flex flex-col gap-stack-sm">
+<!-- Rank 1 Card -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-primary shadow-[0_4px_12px_rgba(0,53,39,0.08)] relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="w-10 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md text-primary font-black">1</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 border border-outline-variant overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A minimalist architectural icon of a modern city hall building, rendered in clean line art style with deep green and soft gray tones on a pure white background, conveying civic authority and structural transparency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9zvPhc1xLX7mEw3TVQhV7VDIZRzkPXHR-2aSc65SVcPgSFmpuFgf77LAAOfC4dhwiMfM9N9TCqElK-cu265oUFQp-E-S5nON2zW2967JvncdlPyoA7nHG2JgnSMf-_P61gOvJahDYcGSo0Oe3yCeYl3D1AjcA-Gxz6MEl4XLQB5rr1rC8vTqFQD07U_FEBPlHHUgypNj90kPs_gZ8Ssv2YC6pgvjUiE-sck6dY6OgPFyc-uzPtdtUfYTdX4Xv2iaumOgEsBDFhkc"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-sm text-label-sm text-on-background font-bold truncate">Dhaka City Corporation</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[12px] truncate">Municipal Services</p>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<div class="flex items-center gap-1 bg-primary-container px-2 py-1 rounded-md">
+<span class="font-label-sm text-label-sm text-on-primary-container font-bold">4.8</span>
+<span class="material-symbols-outlined text-on-primary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Rank 2 Card -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+<div class="w-10 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md text-on-surface-variant font-bold">2</span>
+<span class="material-symbols-outlined text-outline-variant text-sm">remove</span>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 border border-outline-variant overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A clean, abstract vector logo representing healthcare or public medicine, using geometric shapes and soft pastel green and grey colors, reflecting a modern, sterile, and professional civic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp8cc-Qv0BPpxc0Tw_u_QXovBiZnI9Xb23GL-g_Pr4msIeFhMzF0wQV6UiNcGbDC4TxjSTXthZaBJM5tO7kj6X2oA-o4BN8bxGwe4LhVxNVGPxLZHuaX6suqhEIdu0gXK-WZXZBVciqOSD7l-AyLvo8iX1pxQSJGCOqF1AU-oGsNn1XBvJrlJeAjpO72hUpfQO613NmrP24Yd7fqieFdTT1yoMBnVgW3Q3_Zp64zWmI3Yw_h-yj1T6llsutgSvSGEQtn0dB03lqNc"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-sm text-label-sm text-on-background font-bold truncate">Ministry of Health</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[12px] truncate">Public Healthcare</p>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">4.5</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Rank 3 Card -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+<div class="w-10 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md text-on-surface-variant font-bold">3</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">arrow_drop_down</span>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 border border-outline-variant overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="An abstract graphic design illustrating energy and power lines, utilizing a minimalist corporate modern style with deep emerald greens and stark white contrast, symbolizing efficient public utilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ZkUsiZmg_XEyBPiVzq0K2OAFLl3WAqIk5BpUkhGbMKpHmO1FJjj9f3nNTgJjNRAxE5CbN99r5kN4LA_iv8xOjS8QOhHctEwlhKkctTVb9Mbggb-XTkO44nahvtzMM-ExRC2kgoEMt-Uzs29MYgnwCuUqIrhrn84KNhdUN9lL-k92da3hUzDL3IPGAFOO1keLD_pf1lyCC2WASeKkLedSH4Z0p_5z5rqKkT-9NXNSi6n6CqSuXjsLQwKao6Ea_wNE4W-mCOgTGhk"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-sm text-label-sm text-on-background font-bold truncate">Power Development Board</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[12px] truncate">National Grid</p>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">4.2</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Rank 4 Card -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow opacity-90">
+<div class="w-10 flex flex-col items-center justify-center">
+<span class="font-body-lg text-body-lg text-on-surface-variant">4</span>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 border border-outline-variant overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A stylized drop of water incorporating gear motifs, designed in a flat, crisp civic minimalism style. The color palette features slate grey and muted teal, conveying essential public infrastructure management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXKBfkiW2NR_3m22YoK_I2TdUGDnWC89mMqMeQr0io9AzjngZckNRD6C29yNh96rslphUJSBnryBi1MpUwvyVV8JnpeNWfNLuF3GlD-vZaGI-s7rTFtgVBYYMthczwGSGphxFf3m7pZhwbxMhlQwhje5mqds9qanqz-zbDxD8Mb1UEWQYGYaVksmo6Kwb4r__fmHXKsaqpQ9dKVnc73yoZ92eA6S_WsQERZ9y5GtJq3THGUaDOaI0G4tB5Wq17Mt9cS5KcK9B1EEY"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-sm text-label-sm text-on-background font-bold truncate">WASA</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[12px] truncate">Water &amp; Sanitation</p>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">3.8</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+</div>
+<!-- Rank 5 Card -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-outline-variant hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow opacity-80">
+<div class="w-10 flex flex-col items-center justify-center">
+<span class="font-body-lg text-body-lg text-on-surface-variant">5</span>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 border border-outline-variant overflow-hidden bg-surface-container flex items-center justify-center">
+<div class="w-full h-full bg-surface-variant flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-label-sm text-label-sm text-on-background font-bold truncate">National Tax Board</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[12px] truncate">Revenue</p>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-1 rounded-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">3.1</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">star_border</span>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<button class="w-full py-4 mt-2 font-label-sm text-label-sm text-primary border border-primary rounded-xl hover:bg-surface-variant transition-colors flex justify-center items-center gap-2">
+                View Full Ranking
+                <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Visible) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant bg-surface shadow-md lg:hidden flex justify-around items-center px-4 py-3 pb-safe max-w-7xl mx-auto">
+<!-- Tab 1: Feed (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-150">dynamic_feed</span>
+<span class="font-label-sm text-label-sm text-[11px] mt-1">ফিড</span>
+</a>
+<!-- Tab 2: Leaderboard (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-150" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-label-sm text-label-sm text-[11px] mt-1 font-bold">লিডারবোর্ড</span>
+</a>
+<!-- Tab 3: Report (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-150">assignment</span>
+<span class="font-label-sm text-label-sm text-[11px] mt-1">রিপোর্ট</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-90 transition-transform duration-150">person</span>
+<span class="font-label-sm text-label-sm text-[11px] mt-1">প্রোফাইল</span>
+</a>
+</nav>
+<!-- Simple JS for Segmented Tab animation -->
+<script>
+        function switchTab(index) {
+            const indicator = document.getElementById('tab-indicator');
+            const buttons = indicator.parentElement.querySelectorAll('button');
+            
+            if(index === 0) {
+                indicator.style.transform = 'translateX(0)';
+                buttons[0].classList.add('text-primary', 'font-bold');
+                buttons[0].classList.remove('text-on-surface-variant');
+                buttons[1].classList.remove('text-primary', 'font-bold');
+                buttons[1].classList.add('text-on-surface-variant');
+            } else {
+                indicator.style.transform = 'translateX(100%)';
+                buttons[1].classList.add('text-primary', 'font-bold');
+                buttons[1].classList.remove('text-on-surface-variant');
+                buttons[0].classList.remove('text-primary', 'font-bold');
+                buttons[0].classList.add('text-on-surface-variant');
+            }
+        }
+    </script>
+</body></html>

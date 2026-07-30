@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - Bookmarks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-tertiary-fixed-variant": "#454748",
+                            "on-surface": "#121c2a",
+                            "inverse-primary": "#95d3ba",
+                            "surface": "#f9f9ff",
+                            "secondary": "#b80938",
+                            "on-tertiary-container": "#b0b2b3",
+                            "error": "#ba1a1a",
+                            "surface-tint": "#2b6954",
+                            "surface-container": "#e6eeff",
+                            "surface-container-lowest": "#ffffff",
+                            "on-primary-container": "#80bea6",
+                            "tertiary-fixed-dim": "#c5c7c8",
+                            "on-background": "#121c2a",
+                            "primary-container": "#064e3b",
+                            "on-secondary-fixed": "#40000d",
+                            "on-primary-fixed": "#002117",
+                            "tertiary-container": "#424546",
+                            "outline": "#707974",
+                            "tertiary": "#2c2f30",
+                            "surface-variant": "#d9e3f7",
+                            "surface-dim": "#d0daef",
+                            "surface-bright": "#f9f9ff",
+                            "outline-variant": "#bfc9c3",
+                            "on-secondary-fixed-variant": "#920029",
+                            "on-primary": "#ffffff",
+                            "surface-container-low": "#eff3ff",
+                            "primary-fixed-dim": "#95d3ba",
+                            "background": "#f9f9ff",
+                            "inverse-on-surface": "#ebf1ff",
+                            "on-tertiary-fixed": "#191c1d",
+                            "primary": "#003527",
+                            "primary-fixed": "#b0f0d6",
+                            "secondary-fixed": "#ffdadb",
+                            "error-container": "#ffdad6",
+                            "on-error": "#ffffff",
+                            "on-primary-fixed-variant": "#0b513d",
+                            "inverse-surface": "#273140",
+                            "surface-container-highest": "#d9e3f7",
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-high": "#dee9fd",
+                            "on-secondary-container": "#fffbff",
+                            "tertiary-fixed": "#e1e3e4",
+                            "secondary-fixed-dim": "#ffb2b7",
+                            "secondary-container": "#db2e4e",
+                            "on-surface-variant": "#404944",
+                            "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "gutter-grid": "1.5rem",
+                            "margin-page": "2rem",
+                            "stack-lg": "2rem",
+                            "stack-md": "1rem",
+                            "stack-sm": "0.5rem"
+                    },
+                    "fontFamily": {
+                            "label-sm": [
+                                    "Hanken Grotesk"
+                            ],
+                            "body-lg": [
+                                    "Hanken Grotesk"
+                            ],
+                            "body-md": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-xl": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-md": [
+                                    "Hanken Grotesk"
+                            ],
+                            "headline-lg": [
+                                    "Hanken Grotesk"
+                            ]
+                    },
+                    "fontSize": {
+                            "label-sm": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "headline-xl": [
+                                    "40px",
+                                    {
+                                            "lineHeight": "48px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "headline-md": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "headline-lg": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "700"
+                                    }
+                            ]
+                    }
+            },
+                },
+            }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+</head>
+<body class="flex min-h-screen bg-background">
+<!-- SideNavBar -->
+<nav aria-label="Side Navigation" class="hidden lg:flex flex-col h-screen fixed left-0 top-0 p-stack-md bg-surface-container-low dark:bg-inverse-surface border-r border-outline-variant dark:border-outline docked h-full w-[280px] z-40">
+<div class="mb-8">
+<h1 class="text-headline-lg font-headline-lg text-primary dark:text-inverse-primary">Jonomot</h1>
+</div>
+<div class="flex items-center gap-4 mb-8 px-4 py-3 bg-surface-container-high rounded-xl">
+<img alt="User Profile Avatar" class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a user in a well-lit studio setting. High key lighting, modern civic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWZ_NsBenoGCFJ86UN59rOIzQ7Gb8_9d-y-y7zu3YzwxR4eizLSQwmC5jOhPbPOh4A1T7bA_2bBJD1HCRhQEK486bbdcyNRT8FBtTXkccK4GZL_KNk72X_CsUCiEO0X7Q1Fs5FExJvuF4He9a6CGPAQ1WG6xOuNV3QdxMaE0QWsTgo4EXO3m1NZ3m91pC9N5jpu90PJp8qEyCvCi_HatgBfTjqw0e273aa0Y0szPRrZrdOF_rMe_VSxprY2Ok43cSPRh9KCg1UD6U"/>
+<div>
+<h2 class="text-label-sm font-label-sm font-bold text-on-surface">Citizen Portal</h2>
+<p class="text-[12px] text-on-surface-variant">Transparency in Action</p>
+</div>
+</div>
+<ul class="flex flex-col gap-2 flex-grow">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-sm font-label-sm">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold hover:bg-primary-fixed-dim/20 transition-all scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="text-label-sm font-label-sm">Institutions</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-label-sm font-label-sm">Public Feed</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-label-sm font-label-sm">Map View</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-label-sm font-label-sm">Leaderboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto mb-6">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg text-label-sm font-label-sm font-bold shadow-sm hover:opacity-90 transition-opacity">
+                Submit Report
+            </button>
+</div>
+<div class="pt-4 border-t border-outline-variant flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">info</span>
+                About Jonomot
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+                Help &amp; Support
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-[280px] w-full min-h-screen pb-24 lg:pb-0">
+<!-- TopAppBar (Mobile & Tablet mostly, but responsive) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-4 md:px-margin-page h-16 bg-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline lg:hidden">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">Jonomot</div>
+<div class="flex items-center gap-4">
+<!-- Search Bar hidden on mobile header, usually in content -->
+<button class="text-on-surface-variant hover:bg-surface-container transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Page Content Workspace -->
+<div class="max-w-[1280px] mx-auto px-4 md:px-margin-page py-8">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+<div>
+<h1 class="text-headline-xl font-headline-xl text-on-surface">সংরক্ষিত প্রতিষ্ঠানসমূহ</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-1">Your bookmarked civic institutions for quick access.</p>
+</div>
+<div class="w-full md:w-auto relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full md:w-[300px] bg-surface-container-lowest border border-outline-variant rounded-full py-3 pl-12 pr-4 text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Search saved places..." type="text"/>
+</div>
+</div>
+<!-- Bento Grid of Bookmarks -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter-grid">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative h-32 w-full bg-surface-container-low">
+<img alt="Hospital Building" class="w-full h-full object-cover mix-blend-multiply" data-alt="The exterior of a modern public hospital building in Dhaka, Bangladesh, during a sunny day. Clear blue sky, green trees, civic minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRSKzr2aT2gNMuQj-F6gXrH-rOvz8uWZY0jDlw8tFXAdMbgXUEp62vM4m_mGyVxMSRziU58uOfElvKMVYwHHVMSwRcD3TxCVh_5Z6EmSSOymVs6oZUCzxr-CqYH86Z8hvBI3fSl6pjKb1HPiIsO2RRHEVTKlCpyLdL-nZBQqbRQg1fnPqHHUxZKPWqc0Kc94WdgcCwgFXrW13LGRes_HQHJNgPDDn1NDlHcpo14YMCp6dJBPaaTNl0DMhhclS9imuRUdhtOyTtlWs"/>
+<button class="absolute top-3 right-3 bg-surface/80 backdrop-blur-md p-1.5 rounded-full text-primary hover:bg-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-md px-2 py-1 rounded-md text-[12px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.2
+                        </div>
+</div>
+<div class="p-4">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Dhaka Medical College Hospital (DMCH)</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Secretariat Road, Dhaka
+                        </p>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface border border-outline-variant text-primary py-2 rounded-lg text-label-sm font-label-sm hover:bg-surface-container-low transition-colors">Details</button>
+<button class="flex-1 bg-primary-container text-on-primary-container py-2 rounded-lg text-label-sm font-label-sm hover:opacity-90 transition-opacity">Review</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative h-32 w-full bg-surface-container-low">
+<img alt="Passport Office" class="w-full h-full object-cover mix-blend-multiply" data-alt="A modern passport office interior in Bangladesh, clean waiting area with organized seating, bright daylight, civic minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9F_huTBkeTQUK2j0ttJDOhPbcdxN9AGhJAnYe5VUGmU_n4oOOQZVdqSauNSe9giBwkjXBypO8N_lbvS8K4tE4DHm1c0mGP_vSgm2RZTahOwzLhzRK72N1C9GBpjuX4UdGzGrqWa1vQrsFhDaSGIYMmjgazzxHFbSYFNvwtuin0kQTPBN2mr1q0ekc2xkxPSr56oYrTFiTlZNPAh50UQVIpsvZ0OB6hIrhqPumdMa3Xsle7_ygvUSbgdlRKToRDTRtouBFUwQr8qA"/>
+<button class="absolute top-3 right-3 bg-surface/80 backdrop-blur-md p-1.5 rounded-full text-primary hover:bg-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-md px-2 py-1 rounded-md text-[12px] font-bold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 2.8
+                        </div>
+</div>
+<div class="p-4">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Agargaon Passport Office</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Agargaon, Dhaka
+                        </p>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface border border-outline-variant text-primary py-2 rounded-lg text-label-sm font-label-sm hover:bg-surface-container-low transition-colors">Details</button>
+<button class="flex-1 bg-primary-container text-on-primary-container py-2 rounded-lg text-label-sm font-label-sm hover:opacity-90 transition-opacity">Review</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative h-32 w-full bg-surface-container-low">
+<img alt="Police Station" class="w-full h-full object-cover mix-blend-multiply" data-alt="A local police station building in a suburban area of Bangladesh, professional and approachable exterior, bright sunny day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs99GhcVdEsv6BBcVwSbGn7VSjRVCBzOmGEinQtP6iDzrMacrWK0sCxnk1AMPr2_ts5ifu7ffRTiicTFdBYJYlDIRtkbk_upbUCEChEYImElN6_TU8Av1wIO15R5eXFPuxGPxuoeUCM8GUdQlApq3ncGmIOUp-Zl5UHYJsyMDiT8bsbnLdkXCBYfsVJGHWi3Y-n8e-Foh2A38VT8YyQLBkT3N7JpGjjV_vkPZrt7-SWyLnotxpUxMy-iBXmbJk9ss1plG8RtbqJzs"/>
+<button class="absolute top-3 right-3 bg-surface/80 backdrop-blur-md p-1.5 rounded-full text-primary hover:bg-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-surface/90 backdrop-blur-md px-2 py-1 rounded-md text-[12px] font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 3.5
+                        </div>
+</div>
+<div class="p-4">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-1">Gulshan Police Station</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Gulshan, Dhaka
+                        </p>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface border border-outline-variant text-primary py-2 rounded-lg text-label-sm font-label-sm hover:bg-surface-container-low transition-colors">Details</button>
+<button class="flex-1 bg-primary-container text-on-primary-container py-2 rounded-lg text-label-sm font-label-sm hover:opacity-90 transition-opacity">Review</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden, but structured for logic) -->
+<div class="hidden flex flex-col items-center justify-center py-24 text-center">
+<div class="w-24 h-24 bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[48px] text-outline-variant">bookmark_border</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg text-on-surface mb-2">No Bookmarks Yet</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-md">You haven't saved any institutions. Explore the directory to find and save places for quick access.</p>
+<button class="mt-6 bg-surface border border-primary text-primary px-6 py-3 rounded-lg font-label-sm hover:bg-surface-container-low transition-colors">
+                    Explore Directory
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-surface/90 backdrop-blur-md shadow-sm border-t border-outline-variant dark:border-outline rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest w-16" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[12px] font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 scale-90 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-[12px] font-label-sm">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest w-16" href="#">
+<span class="material-symbols-outlined mb-1">add_circle</span>
+<span class="text-[12px] font-label-sm">Report</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest w-16" href="#">
+<span class="material-symbols-outlined mb-1">list_alt</span>
+<span class="text-[12px] font-label-sm">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-highest w-16" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="text-[12px] font-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Jonomot - Register</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Hanken Grotesk -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bfc9c3",
+                    "tertiary": "#2c2f30",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "on-surface": "#121c2a",
+                    "surface-dim": "#d0daef",
+                    "tertiary-container": "#424546",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#191c1d",
+                    "primary-fixed-dim": "#95d3ba",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#dee9fd",
+                    "inverse-primary": "#95d3ba",
+                    "secondary": "#b80938",
+                    "on-tertiary-container": "#b0b2b3",
+                    "on-primary-container": "#80bea6",
+                    "outline": "#707974",
+                    "on-background": "#121c2a",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#e1e3e4",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-primary-fixed": "#002117",
+                    "secondary-container": "#db2e4e",
+                    "secondary-fixed": "#ffdadb",
+                    "surface-tint": "#2b6954",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#920029",
+                    "secondary-fixed-dim": "#ffb2b7",
+                    "on-secondary-container": "#fffbff",
+                    "error": "#ba1a1a",
+                    "primary-container": "#064e3b",
+                    "background": "#f9f9ff",
+                    "surface-container-highest": "#d9e3f7",
+                    "primary-fixed": "#b0f0d6",
+                    "on-surface-variant": "#404944",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "inverse-surface": "#273140",
+                    "surface-bright": "#f9f9ff",
+                    "surface": "#f9f9ff",
+                    "surface-variant": "#d9e3f7",
+                    "on-secondary-fixed": "#40000d",
+                    "on-secondary": "#ffffff",
+                    "primary": "#003527",
+                    "surface-container": "#e6eeff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "1rem",
+                    "stack-lg": "2rem",
+                    "stack-sm": "0.5rem",
+                    "gutter-grid": "1.5rem",
+                    "margin-page": "2rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .step-transition {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(6, 78, 59, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Navigation (Simplified for Transactional Flow) -->
+<header class="flex justify-between items-center w-full px-margin-page py-stack-sm sticky top-0 z-50 bg-surface border-b border-outline-variant">
+<div class="h-8 w-auto flex items-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDemPhKRDTPiZSdMbOA71Irk4qKFHd2mSOoKOjS8zMWrtYUT9QaY3qVwV0n_vophtxphRWIsuHEPzthBc_j7fEyhDLIMcord4kzgS1hUiaBplYExBfmdtbSMoYu3vjItaW7k2lL1AfKWUbdh1fdXERXFSi1Cfz0wCBL9O-LWe1_FAcZxMWiPdppWvPGD3fd6yZq4EQkuDgL77_4jpSWcv4nUwRP4aaXKFuHNU3rC3uqw_zJjWwL8mxWX2L0TNhwvsQtwWodROE9w0o" alt="Jonomot Official Logo" class="h-full w-auto object-contain"></div>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors active:scale-95 duration-150" onclick="window.history.back()">
+<span class="material-symbols-outlined text-primary" data-icon="close">close</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col px-margin-page pt-stack-lg pb-10">
+<!-- Progress Indicator -->
+<div class="w-full flex gap-2 mb-stack-lg" id="step-indicators">
+<div class="h-1.5 flex-grow rounded-full bg-primary-container" id="indicator-1"></div>
+<div class="h-1.5 flex-grow rounded-full bg-surface-container-highest" id="indicator-2"></div>
+<div class="h-1.5 flex-grow rounded-full bg-surface-container-highest" id="indicator-3"></div>
+</div>
+<div class="relative overflow-hidden flex-grow flex flex-col">
+<!-- Step 1: Phone Number -->
+<section class="step-transition w-full flex flex-col gap-6" id="step-1">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Join the Platform</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Enter your phone number to receive a secure verification code.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="relative">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Phone Number</label>
+<div class="flex gap-3">
+<div class="flex items-center justify-center bg-surface-container border border-outline-variant rounded-lg px-3 py-4 min-w-[70px]">
+<span class="font-body-md text-body-md text-on-surface font-semibold">+880</span>
+</div>
+<div class="relative flex-grow">
+<input class="w-full py-4 px-4 bg-white border border-outline-variant rounded-lg font-body-md text-body-md focus:border-primary-container transition-all" id="phone-input" placeholder="01XXX-XXXXXX" type="tel">
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary-container text-white py-4 rounded-lg font-body-lg text-body-lg font-bold flex justify-center items-center gap-2 active:scale-95 transition-transform duration-150" onclick="goToStep(2)">
+                        Send Verification Code
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="mt-4 text-center font-label-sm text-label-sm text-on-surface-variant">
+                        Already have an account? <a class="text-primary font-bold" href="#">Sign In</a>
+</p>
+</div>
+</section>
+<!-- Step 2: OTP Verification -->
+<section class="step-transition absolute inset-0 translate-x-full opacity-0 pointer-events-none flex flex-col gap-6" id="step-2">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Verify Phone</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">We've sent a 6-digit code to <span class="font-bold text-on-surface" id="display-phone">+880 01XXX-XXXXXX</span>.</p>
+</div>
+<div class="flex justify-between gap-2 mt-4">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+<input class="otp-input w-12 h-14 text-center font-headline-md text-headline-md border border-outline-variant rounded-lg bg-white focus:border-primary-container" maxlength="1" type="text">
+</div>
+<div class="flex flex-col gap-4">
+<button class="text-primary font-label-sm text-label-sm font-bold self-start opacity-50 cursor-not-allowed" id="resend-btn">
+                        Resend code (45s)
+                    </button>
+</div>
+<div class="mt-auto flex flex-col gap-3">
+<button class="w-full bg-primary-container text-white py-4 rounded-lg font-body-lg text-body-lg font-bold active:scale-95 transition-transform duration-150" onclick="goToStep(3)">
+                        Verify &amp; Continue
+                    </button>
+<button class="w-full bg-transparent text-primary py-4 rounded-lg font-label-sm text-label-sm font-bold border border-outline-variant" onclick="goToStep(1)">
+                        Change Phone Number
+                    </button>
+</div>
+</section>
+<!-- Step 3: Identity Setup -->
+<section class="step-transition absolute inset-0 translate-x-full opacity-0 pointer-events-none flex flex-col gap-6" id="step-3">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Personal Details</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete your profile to start accessing civic services.</p>
+</div>
+<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Full Name (as per NID)</label>
+<input class="w-full py-4 px-4 bg-white border border-outline-variant rounded-lg font-body-md text-body-md focus:border-primary-container transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">District</label>
+<select class="w-full py-4 px-4 bg-white border border-outline-variant rounded-lg font-body-md text-body-md focus:border-primary-container appearance-none">
+<option>Select District</option>
+<option>Dhaka</option>
+<option>Chattogram</option>
+<option>Rajshahi</option>
+<option>Sylhet</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-1">Account Password</label>
+<div class="relative">
+<input class="w-full py-4 px-4 bg-white border border-outline-variant rounded-lg font-body-md text-body-md focus:border-primary-container transition-all" placeholder="Min. 8 characters" type="password">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="visibility">visibility</span>
+</div>
+</div>
+<label class="flex items-start gap-3 mt-2">
+<input class="mt-1 w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox">
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                            I agree to the <a class="text-primary underline" href="#">Terms of Service</a> and <a class="text-primary underline" href="#">Privacy Policy</a>.
+                        </span>
+</label>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary-container text-white py-4 rounded-lg font-body-lg text-body-lg font-bold shadow-lg shadow-primary-container/20 active:scale-95 transition-transform duration-150" onclick="finishRegistration()">
+                        Create Account
+                    </button>
+</div>
+</section>
+</div>
+</main>
+<!-- Background Illustration (Subtle Mural Style) -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden flex justify-center items-end opacity-0">
+<div class="w-[150%] h-[50%] bg-contain bg-bottom bg-no-repeat" data-alt="An intricate, minimalist line-art mural depicting Bangladeshi urban architecture, rural landscapes, and civic harmony. The style is clean and modern, using deep forest green lines on a soft white canvas, evoking a sense of patriotic pride and transparent governance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDD3bvSSka3e2tjPfsYjPP8BmbQp4oPHL7SJNt39Wgm4TGyZrKX414Z79ujySeTMou1R05A5281SgrFFW0pnU-hCt-OsTYOJlAtqopDRoQqYdvPKCeEKf1YovBZA15Bunkrq_5GNaFIl4vJwQlUEugarelCRO0iN25ZeCboRfrMzhSuaKodAIpv5055Vh2zt8mfwDvbhJR9n16yoCt1ZlqC_sgC_wLMFNZ4_z7FFKgFLAKKHPRtYRFCTMxnLsF1TGwgACB6BY-0dHQ')"></div>
+</div>
+<!-- Success Feedback Overlay (Hidden by default) -->
+<div class="fixed inset-0 z-[100] bg-surface flex flex-col items-center justify-center p-margin-page opacity-0 pointer-events-none transition-opacity duration-500" id="success-overlay">
+<div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center mb-stack-lg scale-0 transition-transform duration-700 delay-200" id="success-icon">
+<span class="material-symbols-outlined text-white text-[48px]" data-icon="check_circle">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-2">Welcome to Jonomot</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-[280px]">Your account has been created successfully. Redirecting to your dashboard...</p>
+</div>
+<script>
+        function goToStep(step) {
+            const s1 = document.getElementById('step-1');
+            const s2 = document.getElementById('step-2');
+            const s3 = document.getElementById('step-3');
+            const i1 = document.getElementById('indicator-1');
+            const i2 = document.getElementById('indicator-2');
+            const i3 = document.getElementById('indicator-3');
+
+            // Phone update logic
+            if(step === 2) {
+                const phoneVal = document.getElementById('phone-input').value;
+                document.getElementById('display-phone').innerText = '+880 ' + (phoneVal || '01XXX-XXXXXX');
+            }
+
+            // Hide all
+            [s1, s2, s3].forEach(el => {
+                el.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+                el.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto', '-translate-x-full');
+            });
+
+            // Indicators
+            [i1, i2, i3].forEach(el => el.classList.replace('bg-primary-container', 'bg-surface-container-highest'));
+
+            if (step === 1) {
+                s1.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+                s1.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                i1.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+            } else if (step === 2) {
+                s1.classList.add('-translate-x-full');
+                s2.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+                s2.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                i1.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+                i2.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+                
+                // Focus first OTP
+                setTimeout(() => document.querySelector('.otp-input').focus(), 400);
+            } else if (step === 3) {
+                s2.classList.add('-translate-x-full');
+                s3.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+                s3.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                i1.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+                i2.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+                i3.classList.replace('bg-surface-container-highest', 'bg-primary-container');
+            }
+        }
+
+        // OTP Input Auto-Tab
+        const otpInputs = document.querySelectorAll('.otp-input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        function finishRegistration() {
+            const overlay = document.getElementById('success-overlay');
+            const icon = document.getElementById('success-icon');
+            overlay.classList.remove('pointer-events-none', 'opacity-0');
+            overlay.classList.add('opacity-100');
+            setTimeout(() => {
+                icon.classList.remove('scale-0');
+                icon.classList.add('scale-100');
+            }, 100);
+
+            // Redirect simulation
+            setTimeout(() => {
+                console.log('Redirecting to dashboard...');
+            }, 2500);
+        }
+    </script>
+
+
+</body></html>

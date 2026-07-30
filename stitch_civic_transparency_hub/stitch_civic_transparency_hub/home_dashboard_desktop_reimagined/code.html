@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - Home Dashboard</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-fonts">
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9f4',
+              100: '#dcfce7',
+              500: '#15803d',
+              600: '#166534',
+              700: '#14532d',
+              900: '#0f3822',
+            },
+            surface: {
+              light: '#ffffff',
+              muted: '#f8fafc',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="background-styles">
+    .bg-mural {
+      position: relative;
+      background-color: #fafafa;
+    }
+    .bg-mural::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0r4py-FB93XyiusvuOBl8Iq1uDLvJ-Hd4ib3CxP6b4Pr6b7jAgPEC7HiN2kOHsC8tFtKgyo_6Y5PWBheMePO52k6xL07C-iH4Bhym2qAadDxD-jvFU1VinyJEBt8Nj_x7XrP_bB6SDKBdsS4o1GzNZW1mAXnXpUMDjTrLIvdszx2wtzVrLPXBZMxnO7AYg-tOzBIzVtlFQB_tvkeAiulR5Qn0Ez4Y7kdytlg5Y3EjHCDGLLKXtCFmjQhH26bBGFDUFVJf935PMHw');
+      background-size: cover;
+      background-position: center right;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .content-overlay {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-surface-muted text-gray-800 antialiased h-screen overflow-hidden flex">
+<!-- BEGIN: Side Navigation -->
+<aside class="w-64 bg-surface-light border-r border-gray-200 h-full flex flex-col z-20 shadow-sm flex-shrink-0">
+<!-- Logo Area -->
+<div class="p-6 flex items-center gap-3">
+<img alt="Jonomot Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvQfM5MtEWAyskrEBIzA_Nmhuo_6YuH1q8A9q-HXLKFR7tdsG25Ka3byADJjVHJwox7_LTniU0jW9-SH8ZpwifYEmjE3m8axqQMFICgLfuzbtJT0TVcn_LUmMRxCBR0nnTxMHsS-OzU_sFiLxzVsodg4uxxpMeWdpbEP6ZGy4QS5dH2lNMQevFtpu_8FLjPMkhmDgFl2hinSd75b_Sdlz1PRHRokHRhPhob4qD7lffAIoDp-l1GJWNXRn0"/>
+<div>
+<h1 class="text-xl font-bold text-gray-900 leading-tight">jonomot</h1>
+<p class="text-[10px] text-gray-500 font-medium">জনতার মত জনতার জন্য</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-brand-50 text-brand-700 font-medium transition-colors" href="#">
+<i class="fa-solid fa-house w-5 text-center"></i>
+<span>হোম</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-solid fa-building w-5 text-center"></i>
+<span>প্রতিষ্ঠানসমূহ</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-regular fa-comments w-5 text-center"></i>
+<span>পাবলিক ফিড</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-solid fa-map-location-dot w-5 text-center"></i>
+<span>ম্যাপ ভিউ</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-solid fa-ranking-star w-5 text-center"></i>
+<span>লিডারবোর্ড</span>
+</a>
+<div class="pt-4 pb-2">
+<p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">আমার কার্যক্রম</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-regular fa-file-lines w-5 text-center"></i>
+<span>আমার রিপোর্ট</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<i class="fa-regular fa-bell w-5 text-center"></i>
+<span>নোটিফিকেশন</span>
+</a>
+</nav>
+<!-- Bottom Actions -->
+<div class="p-4 border-t border-gray-100 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors text-sm" href="#">
+<i class="fa-regular fa-user w-5 text-center"></i>
+<span>প্রোফাইল</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors text-sm" href="#">
+<i class="fa-solid fa-gear w-5 text-center"></i>
+<span>সেটিংস</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors text-sm" href="#">
+<i class="fa-regular fa-circle-question w-5 text-center"></i>
+<span>সহায়তা ও সাপোর্ট</span>
+</a>
+<div class="pt-2">
+<button class="w-full flex items-center justify-center gap-2 bg-brand-50 hover:bg-brand-100 text-brand-700 py-2.5 rounded-lg font-medium transition-colors border border-brand-100">
+<i class="fa-solid fa-shield-halved"></i>
+<span>সদস্যতা রিপোর্ট করুন</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- END: Side Navigation -->
+<!-- BEGIN: Main Content Area -->
+<main class="flex-1 h-full overflow-y-auto bg-mural">
+<div class="content-overlay max-w-7xl mx-auto px-8 py-6">
+<!-- BEGIN: Top Bar Search & Profile -->
+<header class="flex justify-between items-center mb-16 gap-6">
+<div class="flex-1 max-w-2xl">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-brand-100">
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+<input class="w-full bg-brand-700 text-white placeholder-brand-100 rounded-full py-3.5 pl-12 pr-12 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-brand-800 transition-colors border-none shadow-sm" placeholder="প্রতিষ্ঠান, সেবা, অফিস খুঁজুন..." type="text"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-brand-100 hover:text-white transition-colors">
+<i class="fa-solid fa-filter"></i>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-5">
+<button class="relative text-gray-600 hover:text-brand-600 transition-colors">
+<i class="fa-regular fa-bell text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center border-2 border-white">3</span>
+</button>
+<div class="flex items-center gap-2 cursor-pointer">
+<img alt="User Avatar" class="h-10 w-10 rounded-full border-2 border-white shadow-sm object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH7n0HIpawT2WRHE13AcrM5OjsqhDEAGPd-cHiIxlO99z5VOB1NTkBCjB_uYTX2tDiuR06D5_8jJzXaiix8c3nerior1JJQwZ3YpB3FlJkqlwIXL-0CFDBSWJZCVOh4NqK-JF8S_9IzYvLWgHlft6OZu_Wc3BznX5RZ9lU0ZR4X7wFPnvr8LB6V9AT2il0AaBdJp81f1nPLzHvf7u9k0XwPWVh357SHIWFZhsALWoO82C77df36D9rP3-vyNPHOBzJbYr18Do2B8o"/>
+<i class="fa-solid fa-chevron-down text-gray-500 text-xs"></i>
+</div>
+</div>
+</header>
+<!-- END: Top Bar Search & Profile -->
+<!-- BEGIN: Hero Section -->
+<section class="mb-16 max-w-3xl">
+<h2 class="text-5xl font-bold text-gray-900 leading-tight mb-2">আপনার অভিজ্ঞতা</h2>
+<h2 class="text-5xl font-bold text-brand-600 leading-tight mb-6">পরিবর্তন আনতে পারে</h2>
+<div class="flex items-center gap-2 mb-6">
+<span class="h-1 w-8 bg-brand-600 rounded-full"></span>
+<span class="h-1 w-8 bg-red-500 rounded-full"></span>
+</div>
+<p class="text-lg text-gray-600 mb-10 max-w-xl leading-relaxed">
+          সরকারি সেবা সম্পর্কে জানুন, অভিজ্ঞতা শেয়ার করুন,<br/>
+          আর গড়ে তুলুন একটি স্বচ্ছ ও জবাবদিহিমূলক বাংলাদেশ।
+        </p>
+<div class="flex gap-4">
+<button class="bg-brand-700 hover:bg-brand-800 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors shadow-md">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span>প্রতিষ্ঠান খুঁজুন</span>
+</button>
+<button class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors shadow-sm">
+<i class="fa-regular fa-pen-to-square"></i>
+<span>অভিজ্ঞতা শেয়ার করুন</span>
+</button>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Popular Categories -->
+<section class="mb-12">
+<h3 class="text-xl font-bold text-gray-800 mb-6">জনপ্রিয় বিভাগসমূহ</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 hide-scrollbar">
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow min-w-[200px]" href="#">
+<div class="h-10 w-10 bg-green-50 text-brand-600 rounded-lg flex items-center justify-center text-lg">
+<i class="fa-solid fa-building-columns"></i>
+</div>
+<span class="font-medium text-gray-700">সরকারি অফিস</span>
+</a>
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow min-w-[200px]" href="#">
+<div class="h-10 w-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-lg">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<span class="font-medium text-gray-700">পুলিশ ও আইনশৃংখলা</span>
+</a>
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow min-w-[200px]" href="#">
+<div class="h-10 w-10 bg-orange-50 text-orange-500 rounded-lg flex items-center justify-center text-lg">
+<i class="fa-solid fa-passport"></i>
+</div>
+<span class="font-medium text-gray-700">পাসপোর্ট</span>
+</a>
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow min-w-[200px]" href="#">
+<div class="h-10 w-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center text-lg">
+<i class="fa-regular fa-id-card"></i>
+</div>
+<span class="font-medium text-gray-700">জাতীয় পরিচয়পত্র</span>
+</a>
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow min-w-[200px]" href="#">
+<div class="h-10 w-10 bg-red-50 text-red-500 rounded-lg flex items-center justify-center text-lg">
+<i class="fa-regular fa-hospital"></i>
+</div>
+<span class="font-medium text-gray-700">হাসপাতাল</span>
+</a>
+<a class="flex-shrink-0 bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center w-12 hover:shadow-md transition-shadow text-gray-500 hover:text-brand-600" href="#">
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+</div>
+</section>
+<!-- END: Popular Categories -->
+<!-- BEGIN: Popular Institutions -->
+<section class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold text-gray-800">জনপ্রিয় প্রতিষ্ঠানসমূহ</h3>
+<a class="text-brand-600 hover:text-brand-700 font-medium text-sm flex items-center gap-1" href="#">সব দেখুন <i class="fa-solid fa-chevron-right text-xs"></i></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow relative">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-brand-500 z-10"><i class="fa-regular fa-bookmark"></i></button>
+<div class="flex gap-4">
+<img alt="Mirpur BRTA" class="h-20 w-20 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWUUGIpKXatITPuxsOPyYZ10A6gE3BOrGYG9SECluMftYClUu4bOEvpu-gFnILjWU5UGBzzQwP-7GS0_wfwgFP29Ayw4YIVL6EHitpzBi5RyK_St4vetHUNPJcfuJdaTUYDNO-MsXuig5efQwAJZYQC82-C387cdsldbctO9eDOQIMzdkWBiBZDvcT3veBqU3KINGF3cim5Zgq25woJ0QvH8wvx_eGoNcnABJqYn5LggVfkhljaX7EWwpuuX4Db7OzUznK1jbgj74"/>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-gray-800 text-sm">Mirpur BRTA</h4>
+<p class="text-xs text-gray-500 mb-1">মিরপুর, ঢাকা</p>
+<div class="flex items-center gap-1 text-xs">
+<i class="fa-solid fa-star text-yellow-400"></i>
+<span class="font-medium text-gray-700">4.2</span>
+<span class="text-gray-400">(২,৭৪৮)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow relative">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-brand-500 z-10"><i class="fa-regular fa-bookmark"></i></button>
+<div class="flex gap-4">
+<img alt="Passport Office" class="h-20 w-20 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATYh8dbK-7pjHnyegUXzC2k2NuQv3JEN2DvwgnCAbyT54OnHwZYR9QuehiMrW7KQ0Sja4gERKg0Jc71fGYqQk1nKomI-Wx8B7RMwXJNQZy-pOFmdYzDnrJeifvntjC9rWHYU6KsU6BvrS2gpKiHEXxoWeezX9qiomNRQjRCMXfyb1s8DqQl9NirVeCWZ_66nuBGSiXBnqgSoW29--IdbSRt_Al0IluHL8swndkbo9PhtzuFJv6vGPtuyg2HPUda1AhU_SVHtzZDhM"/>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-gray-800 text-sm">Passport Office</h4>
+<p class="text-xs text-gray-500 mb-1">আগারগাঁও, ঢাকা</p>
+<div class="flex items-center gap-1 text-xs">
+<i class="fa-solid fa-star text-yellow-400"></i>
+<span class="font-medium text-gray-700">4.4</span>
+<span class="text-gray-400">(৩,৬৭৭)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow relative">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-brand-500 z-10"><i class="fa-regular fa-bookmark"></i></button>
+<div class="flex gap-4">
+<img alt="NID Office" class="h-20 w-20 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj2yQYtK8xMd3Kpg2q8VxH_LsR7EXLhNyzol5xzwuEAQCX3NB8O7utbqdmbxikHZX0SZdK7fPcG7ql8_9r16eilR4V_8fIC-IjAWRrorpf3GisH3pQKLNOVFPoSyn1olmu_2T-2_h6osvpJ36eSYvpPMVFNISapXAQnWD8QI_8MTDRwnm_wcge9MfGp4JbOw7ojDTIk7x42BwkcDRmz_Rk75M_zKs_h5829SJofLdzvON6p3Zy5CIZm7cewUkEAIYgyeezMd6Jngc"/>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-gray-800 text-sm">NID Office</h4>
+<p class="text-xs text-gray-500 mb-1">মোহাম্মদপুর, ঢাকা</p>
+<div class="flex items-center gap-1 text-xs">
+<i class="fa-solid fa-star text-yellow-400"></i>
+<span class="font-medium text-gray-700">4.1</span>
+<span class="text-gray-400">(৬৩০)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 hover:shadow-md transition-shadow relative">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-brand-500 z-10"><i class="fa-regular fa-bookmark"></i></button>
+<div class="flex gap-4">
+<img alt="Dhaka Medical College" class="h-20 w-20 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpcYigXy4x9LOflgY-trLwyquzUAPBndQYs16nuYQX5D1V5BcxGnt-HKi2wtq5373IIyHiBijwboZPsJZBrhaBgYVf6gglNzkRLlK37yjXHhoRexQnlpoFt0lG1ZUF7uS4DI-lys7qArip6W37zzMKM5ED7Dfdgy6suYUkvK7LK0Vk6loNwtnozK4zGoqKE4Mu65o4CNlzEz3zD7FlLVvz-P9E8p8byNykE81G5xUgz5cIhO48j38assFxcab4PlIRSZe3vn4NNU"/>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-gray-800 text-sm">Dhaka Medical College</h4>
+<p class="text-xs text-gray-500 mb-1">শাহবাগ, ঢাকা</p>
+<div class="flex items-center gap-1 text-xs">
+<i class="fa-solid fa-star text-yellow-400"></i>
+<span class="font-medium text-gray-700">4.3</span>
+<span class="text-gray-400">(২,১২০)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Popular Institutions -->
+</div>
+</main>
+<!-- END: Main Content Area -->
+<style>
+    /* Hide scrollbar for category list but keep functionality */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
+</body></html>

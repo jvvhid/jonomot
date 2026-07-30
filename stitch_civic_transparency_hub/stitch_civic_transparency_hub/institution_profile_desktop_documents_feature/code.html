@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - BRTA Mirpur 13 Office</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#b0f0d6",
+                        "surface-container": "#e6eeff",
+                        "surface-bright": "#f9f9ff",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#2c2f30",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#b0b2b3",
+                        "on-primary-container": "#80bea6",
+                        "background": "#f9f9ff",
+                        "surface-tint": "#2b6954",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#d9e3f7",
+                        "on-secondary-fixed-variant": "#920029",
+                        "on-surface": "#121c2a",
+                        "outline": "#707974",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#273140",
+                        "on-surface-variant": "#404944",
+                        "tertiary-container": "#424546",
+                        "on-primary-fixed": "#002117",
+                        "outline-variant": "#bfc9c3",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdadb",
+                        "on-secondary-fixed": "#40000d",
+                        "surface-dim": "#d0daef",
+                        "primary-container": "#064e3b",
+                        "tertiary-fixed": "#e1e3e4",
+                        "surface-variant": "#d9e3f7",
+                        "on-tertiary-fixed": "#191c1d",
+                        "primary-fixed-dim": "#95d3ba",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb2b7",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#eff3ff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#db2e4e",
+                        "surface-container-high": "#dee9fd",
+                        "secondary": "#b80938",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "primary": "#003527",
+                        "on-background": "#121c2a",
+                        "inverse-primary": "#95d3ba",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#0b513d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "gutter-grid": "1.5rem",
+                        "margin-page": "2rem",
+                        "stack-md": "1rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            background-image: radial-gradient(theme('colors.surface-variant') 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.outline-variant');
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden antialiased">
+<!-- SideNavBar -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 p-stack-md bg-surface-container-low dark:bg-inverse-surface text-primary dark:text-inverse-primary docked h-full w-[280px] border-r border-outline-variant dark:border-outline flat no shadows z-50">
+<div class="mb-stack-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl text-primary">assured_workload</span>
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary dark:text-inverse-primary tracking-tight">Citizen Portal</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Transparency in Action</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto">
+<ul class="space-y-2">
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+                        Institutions
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">forum</span>
+                        Public Feed
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+                        Map View
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                        Leaderboard
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm hover:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+</div>
+<div class="mt-auto pt-stack-md border-t border-outline-variant">
+<button class="w-full bg-primary-container text-on-secondary py-3 rounded-lg text-label-sm font-label-sm font-bold mb-4 hover:bg-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit_document</span>
+                Submit Report
+            </button>
+<ul class="space-y-1">
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">info</span>
+                        About Jonomot
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                        Help &amp; Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-[280px] overflow-y-auto relative">
+<!-- TopAppBar (Desktop Search/Profile Context) -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-margin-page h-16 bg-surface/95 backdrop-blur-sm border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-full text-label-sm font-label-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Search institutions, reports..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary transition-all">
+<img class="w-full h-full object-cover" data-alt="A small circular profile picture of an individual facing forward in soft natural lighting. The background is a blurred office environment in modern civic style, featuring muted cool tones. High quality professional headshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdQoPuyQjNEDhWQdQiyRJc0ufPRGokoAVJ6El0bL3CtIq7lU1XW0Y2avhxG2z1v9A0r7gw3-7B4FIA7UYlMCHugQ-1VAIU-MvgN7ReK-RRwjB6Duy20kzSlSgj7ZwPr-8KFBFyPaHZbHUkGj7LvEv3-PTtEg9rDu8XpYxqGmWYDM8UQLruFsVnpq5fpRO9TxKX5yIDQ3pU9kjoXf46v3vOg4ehKH460BdXyIsHvsB93UvYk5TumIi_FeVRFB24s3sDNSn-U83jNe0"/>
+</div>
+</div>
+</header>
+<div class="p-margin-page max-w-[1280px] mx-auto">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant mb-stack-md">
+<a class="hover:text-primary transition-colors" href="#">প্রতিষ্ঠানসমূহ</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface">BRTA Mirpur 13 Office</span>
+</div>
+<!-- Profile Header -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg mb-stack-lg shadow-sm relative overflow-hidden flex flex-col md:flex-row gap-stack-lg items-start">
+<div class="w-full md:w-[240px] h-[160px] md:h-[240px] rounded-lg overflow-hidden shrink-0 border border-outline-variant bg-surface-variant relative group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide architectural shot of the exterior of the BRTA Mirpur 13 office building in Dhaka, Bangladesh. The building is functional and imposing, typical of civic architecture, with a clear sky above. The scene is evenly lit, showing citizens gathering near the entrance in a calm, orderly manner, establishing a sense of modern bureaucracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3MhSHosQNi0eEuD772SgYJhmLfDFCaoz1ejx92WpDlay0RodWPXWyUkiUc58w_hJrHbpNO-mdCczdPeXoVExOU4e2PP3nfKbhCKvi9xWoTTU0_gYkv-CzvnYNeKrIfRenXsdahyUdzi2CDI5LTXDF_i8xF2QTgW-KQGyqs1t5Z_n-1qgw4ZCaGh0YRNFwgzf6-c5AInE07Jlh-vcdNmjhtnpvR7qCC_8nX5Uldi6pA-IgiUwtnQSKVG2ZeXwnaV6Ezx1V9SwtMfU"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full w-full">
+<div>
+<div class="flex justify-between items-start gap-4 flex-wrap">
+<div>
+<h2 class="text-headline-xl font-headline-xl text-on-surface mb-2">BRTA Mirpur 13 Office</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> Section 13, Mirpur, Dhaka</p>
+</div>
+<button class="bg-primary-container text-on-secondary px-6 py-3 rounded-lg text-label-sm font-label-sm font-bold hover:bg-primary transition-colors shadow-md hover:shadow-lg flex items-center gap-2 shrink-0">
+<span class="material-symbols-outlined">rate_review</span>
+                                অভিজ্ঞতা শেয়ার করুন
+                            </button>
+</div>
+</div>
+<div class="mt-stack-lg grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-outline-variant pt-stack-md w-full">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-1">নাগরিক রেটিং</span>
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md text-on-surface">৩.২</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+<span class="material-symbols-outlined text-[20px]">star_border</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col border-l border-outline-variant pl-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-1">মোট রিপোর্ট</span>
+<span class="text-headline-md font-headline-md text-on-surface">১,২৪৮</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant pl-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-1">সাড়া দেওয়ার হার</span>
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md text-on-surface">৬৮%</span>
+<span class="text-secondary text-label-sm font-label-sm flex items-center"><span class="material-symbols-outlined text-[16px]">arrow_downward</span> ২%</span>
+</div>
+</div>
+<div class="flex flex-col border-l border-outline-variant pl-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant mb-1">গড় অপেক্ষার সময়</span>
+<span class="text-headline-md font-headline-md text-on-surface">২.৫ ঘণ্টা</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-stack-lg">
+<!-- Left Column: Reports Feed -->
+<div class="lg:col-span-2 space-y-stack-md">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-headline-md font-headline-md text-on-surface">সাম্প্রতিক রিপোর্ট</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-label-sm font-label-sm hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> ফিল্টার
+                            </button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-label-sm font-label-sm hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">sort</span> সাজান
+                            </button>
+</div>
+</div>
+<!-- Report Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-md hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3 items-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold">
+                                    RA
+                                </div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface font-semibold">Rafiq Ahmed</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-[12px]">2 days ago • Vehicle Registration</p>
+</div>
+</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-label-sm font-label-sm text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> অতিরিক্ত অপেক্ষার সময়
+                            </div>
+</div>
+<p class="text-body-md font-body-md text-on-surface mb-4">
+                            Arrived at 9 AM for a simple renewal process. The token system was down, resulting in massive chaos. Waited for nearly 4 hours just to submit the documents. Staff was unhelpful when asked for updates.
+                        </p>
+<div class="flex items-center gap-4 text-on-surface-variant pt-3 border-t border-outline-variant">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span> 24 একমত
+                            </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">comment</span> 3 মন্তব্য
+                            </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors ml-auto text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">share</span> শেয়ার করুন
+                            </button>
+</div>
+</div>
+<!-- Report Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-md hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3 items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+                                    SM
+                                </div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface font-semibold">Sanjida M.</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-[12px]">5 days ago • Driving License</p>
+</div>
+</div>
+<div class="bg-primary-fixed-dim text-on-primary-fixed px-3 py-1 rounded-full text-label-sm font-label-sm text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> প্রক্রিয়া উন্নত হয়েছে
+                            </div>
+</div>
+<p class="text-body-md font-body-md text-on-surface mb-4">
+                            Surprisingly smooth experience today for my biometrics. The new queue management system seems to be working. Was in and out within 45 minutes. The officer at counter 4 was very polite.
+                        </p>
+<div class="flex items-center gap-4 text-on-surface-variant pt-3 border-t border-outline-variant">
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span> 12 একমত
+                            </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">comment</span> 1 মন্তব্য
+                            </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors ml-auto text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px]">share</span> শেয়ার করুন
+                            </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Context & Metrics -->
+<div class="space-y-stack-md"><div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-md mb-stack-md">
+<h4 class="text-label-sm font-label-sm text-on-surface-variant font-bold mb-4 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">description</span>
+        প্রয়োজনীয় কাগজপত্র
+    </h4>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="text-label-sm font-label-sm font-bold text-on-surface mb-1">ড্রাইভিং লাইসেন্স নবায়ন</p>
+<ul class="text-[12px] text-on-surface-variant space-y-1 list-disc pl-4">
+<li>মূল লাইসেন্স ও ফটোকপি</li>
+<li>মেডিকেল সার্টিফিকেট</li>
+<li>জাতীয় পরিচয়পত্রের কপি</li>
+</ul>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg">
+<p class="text-label-sm font-label-sm font-bold text-on-surface mb-1">যানবাহন নিবন্ধন</p>
+<ul class="text-[12px] text-on-surface-variant space-y-1 list-disc pl-4">
+<li>বিক্রয় রসিদ ও চালান</li>
+<li>বীমা সনদপত্র</li>
+<li>ঠিকানার প্রমাণপত্র</li>
+</ul>
+</div>
+<button class="w-full py-2 text-primary text-label-sm font-label-sm font-semibold hover:bg-primary-fixed-dim/10 rounded-lg transition-colors border border-dashed border-primary/30">
+            + তথ্য যোগ করুন
+        </button>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-md">
+<h4 class="text-label-sm font-label-sm text-on-surface-variant font-bold mb-4 uppercase tracking-wider">দ্রুত পদক্ষেপ</h4>
+<div class="space-y-2">
+<button class="w-full text-left px-4 py-3 border border-outline-variant rounded-lg hover:border-primary hover:bg-surface-container transition-all flex items-center justify-between text-label-sm font-label-sm text-on-surface group">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">how_to_reg</span> অ্যাপয়েন্টমেন্ট বুক করুন</span>
+<span class="material-symbols-outlined text-outline-variant">open_in_new</span>
+</button>
+<button class="w-full text-left px-4 py-3 border border-outline-variant rounded-lg hover:border-primary hover:bg-surface-container transition-all flex items-center justify-between text-label-sm font-label-sm text-on-surface group">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">receipt_long</span> আবেদনের অবস্থা চেক করুন</span>
+<span class="material-symbols-outlined text-outline-variant">open_in_new</span>
+</button>
+<button class="w-full text-left px-4 py-3 border border-outline-variant rounded-lg hover:border-primary hover:bg-surface-container transition-all flex items-center justify-between text-label-sm font-label-sm text-on-surface group">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">contact_support</span> অফিসিয়াল নির্দেশিকা</span>
+<span class="material-symbols-outlined text-outline-variant">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Category Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-md">
+<h4 class="text-label-sm font-label-sm text-on-surface-variant font-bold mb-4 uppercase tracking-wider">সমস্যার বিবরণ</h4>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1">
+<span class="text-on-surface">দীর্ঘ অপেক্ষার সময়</span>
+<span class="text-on-surface-variant">৪২%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1">
+<span class="text-on-surface">কর্মীদের আচরণ</span>
+<span class="text-on-surface-variant">২৮%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-tertiary-container h-2 rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1">
+<span class="text-on-surface">সিস্টেম ডাউনটাইম</span>
+<span class="text-on-surface-variant">১৫%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1">
+<span class="text-on-surface">ঘুষ/দুর্নীতি</span>
+<span class="text-on-surface-variant">১৫%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-error h-2 rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-stack-lg border-t border-outline-variant py-stack-lg flex flex-col md:flex-row justify-between items-center gap-4 bg-surface-container-lowest dark:bg-inverse-surface w-full px-margin-page">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 Jonomot Bangladesh. Civic Transparency Platform.</p>
+<div class="flex gap-4">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Methodology</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

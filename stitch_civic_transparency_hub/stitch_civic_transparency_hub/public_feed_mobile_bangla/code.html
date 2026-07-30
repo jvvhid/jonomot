@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Jonomot - Public Feed</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#d9e3f7",
+                    "outline-variant": "#bfc9c3",
+                    "surface-dim": "#d0daef",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "background": "#f9f9ff",
+                    "inverse-surface": "#273140",
+                    "surface-container-highest": "#d9e3f7",
+                    "tertiary-container": "#424546",
+                    "on-primary-fixed": "#002117",
+                    "outline": "#707974",
+                    "secondary-fixed-dim": "#ffb2b7",
+                    "inverse-primary": "#95d3ba",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "on-primary-container": "#80bea6",
+                    "tertiary-fixed": "#e1e3e4",
+                    "primary-fixed": "#b0f0d6",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed": "#ffdadb",
+                    "secondary": "#b80938",
+                    "on-secondary-fixed-variant": "#920029",
+                    "on-surface": "#121c2a",
+                    "on-secondary-fixed": "#40000d",
+                    "on-secondary-container": "#fffbff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#2b6954",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "tertiary": "#2c2f30",
+                    "on-error": "#ffffff",
+                    "on-background": "#121c2a",
+                    "primary-container": "#064e3b",
+                    "surface": "#f9f9ff",
+                    "secondary-container": "#db2e4e",
+                    "surface-bright": "#f9f9ff",
+                    "on-tertiary-fixed": "#191c1d",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#eff3ff",
+                    "on-surface-variant": "#404944",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#e6eeff",
+                    "primary": "#003527",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#dee9fd",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-tertiary-container": "#b0b2b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-grid": "1.5rem",
+                    "stack-lg": "2rem",
+                    "margin-page": "2rem",
+                    "stack-md": "1rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased">
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline flex justify-between items-center px-4 h-16 max-w-7xl mx-auto shadow-sm">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">Jonomot</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-label-sm text-label-sm overflow-hidden border border-outline-variant">
+<img alt="Citizen Profile Avatar" class="w-full h-full object-cover" data-alt="A macro portrait shot of a confident South Asian citizen, warm soft natural lighting, set against a clean minimalist urban background, reflecting a professional and civic-minded persona, shot on 85mm lens with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5dgybqrv7__iCKWzzUor8PLC9KQlhIvbbufLBCSgym3LpaOEzt7OnysX1j_eaN_nIstdFMG8OrqwIfOUJI_ZHYlpy-hAPawZvgvbC5u4A7xnzTtOJVOZ4q8nlIdJ-9uC6egRup4wwnbNWv-dwjD9lPgulGHEwlqJ5_eAhj7hEKIRVsrP73EZkrHABq2yCLhf_aIyp1rlHGB9XCNQebMHmwcMi0LRJPbETCrcSZdV8vR5iEEeSXTjOH_A6G7DB80WcEL7SwqwzxHQ"/>
+</div>
+</div>
+</header>
+<main class="flex-1 pt-20 pb-24 px-4 w-full max-w-md mx-auto flex flex-col gap-stack-md">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar py-1 mb-2">
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">সর্বশেষ</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-variant text-on-surface-variant border border-outline-variant font-label-sm text-label-sm">রাস্তা ও যানজট</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-variant text-on-surface-variant border border-outline-variant font-label-sm text-label-sm">পানি ও বিদ্যুৎ</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-variant text-on-surface-variant border border-outline-variant font-label-sm text-label-sm">পরিবেশ</button>
+</div>
+<article class="bg-surface rounded-xl border border-outline-variant p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary font-headline-md text-headline-md">
+                        R.K
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Mirpur 10</span>
+<span class="font-label-sm text-label-sm text-outline text-[12px]">২ ঘণ্টা আগে</span>
+</div>
+</div>
+<div class="bg-error-container text-on-error-container px-2 py-1 rounded text-[12px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                    Hazard
+                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                মিরপুর ১০ গোলচত্বরের কাছে প্রধান সড়কে বিশাল গর্ত। বৃষ্টির কারণে পানি জমে থাকায় দুর্ঘটনা ঘটছে। কর্তৃপক্ষের দ্রুত পদক্ষেপ প্রয়োজন।
+            </p>
+<div class="w-full h-40 rounded-lg overflow-hidden border border-outline-variant mt-1">
+<img alt="Report visual evidence" class="w-full h-full object-cover" data-alt="A photo showing a large, dangerous pothole filled with muddy rainwater on a busy urban street in South Asia during daytime. Cars and auto-rickshaws navigate carefully around the hazard. High contrast, documentary-style lighting emphasizing the infrastructure decay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpExJHD7h-PttJLoaKLoBBKcKuPoVx9RHHeYCtnZ3tN_EsCab8g_9sF9ku3yOf2O0Aa37TtycyulyEX6QP1MNi-Sef5KyA9sMEQiv_V-u9rdHoubY7orvnVx4k23b97tDcY_mrjJgMgSMV4iQbQnDq3FRN9Jo_9XNClr_4_-C9FVZiBxbFoHE7tJywRLuGPQTSd4g3WXItK1-5ia3ywI8lKoaHTHBZ4JatYw_npxGtn_CtFfJKSkA_HT_dX6lzJIjP6u689niI0k4"/>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-surface-variant">
+<button class="flex items-center gap-1.5 text-primary bg-primary/10 px-3 py-1.5 rounded-full font-label-sm text-label-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                    ৩২৪
+                </button>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-sm text-label-sm">১২</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface rounded-xl border border-outline-variant p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary font-headline-md text-headline-md">
+                        S.M
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Dhanmondi Lake</span>
+<span class="font-label-sm text-label-sm text-outline text-[12px]">৫ ঘণ্টা আগে</span>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-[12px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+                    Waste
+                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                ধানমন্ডি লেকের পাড়ে প্রচুর ময়লা আবর্জনা পড়ে আছে। ডাস্টবিন থাকা সত্ত্বেও মানুষ যত্রতত্র ময়লা ফেলছে। পরিচ্ছন্নতা অভিযান জরুরি।
+            </p>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-surface-variant">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:bg-surface-variant px-3 py-1.5 rounded-full font-label-sm text-label-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+                    ১৮৯
+                </button>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-sm text-label-sm">৪</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface rounded-xl border border-outline-variant p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary font-headline-md text-headline-md">
+                        T.A
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Gulshan Avenue</span>
+<span class="font-label-sm text-label-sm text-outline text-[12px]">১ দিন আগে</span>
+</div>
+</div>
+<div class="bg-surface-container-high text-on-surface px-2 py-1 rounded text-[12px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">traffic</span>
+                    Traffic
+                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                সিগন্যাল লাইট নষ্ট হওয়ার কারণে গুলশান এভিনিউতে তীব্র যানজট। ট্রাফিক পুলিশের সংখ্যা বাড়ানো উচিত।
+            </p>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-surface-variant">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:bg-surface-variant px-3 py-1.5 rounded-full font-label-sm text-label-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+                    ৫১২
+                </button>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-sm text-label-sm">৩৪</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</article>
+</main>
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant dark:border-outline bg-surface dark:bg-surface-container-highest shadow-md lg:hidden flex justify-around items-center px-4 py-3 pb-safe">
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-5 py-1 active:scale-90 transition-transform duration-150 group">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dynamic_feed</span>
+<span class="font-label-sm text-label-sm font-bold mt-1 text-[11px]">ফিড</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-sm text-label-sm mt-1 text-[11px]">লিডারবোর্ড</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-sm text-label-sm mt-1 text-[11px]">রিপোর্ট</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:bg-surface-variant dark:hover:bg-inverse-surface rounded-full active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm mt-1 text-[11px]">প্রোফাইল</span>
+</button>
+</nav>
+</body></html>

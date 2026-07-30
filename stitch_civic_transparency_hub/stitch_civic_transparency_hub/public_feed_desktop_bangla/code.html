@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jonomot - পাবলিক ফিড</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#d9e3f7",
+                      "outline-variant": "#bfc9c3",
+                      "surface-dim": "#d0daef",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "background": "#f9f9ff",
+                      "inverse-surface": "#273140",
+                      "surface-container-highest": "#d9e3f7",
+                      "tertiary-container": "#424546",
+                      "on-primary-fixed": "#002117",
+                      "outline": "#707974",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "inverse-primary": "#95d3ba",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "on-primary-container": "#80bea6",
+                      "tertiary-fixed": "#e1e3e4",
+                      "primary-fixed": "#b0f0d6",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "secondary-fixed": "#ffdadb",
+                      "secondary": "#b80938",
+                      "on-secondary-fixed-variant": "#920029",
+                      "on-surface": "#121c2a",
+                      "on-secondary-fixed": "#40000d",
+                      "on-secondary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#2b6954",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "tertiary": "#2c2f30",
+                      "on-error": "#ffffff",
+                      "on-background": "#121c2a",
+                      "primary-container": "#064e3b",
+                      "surface": "#f9f9ff",
+                      "secondary-container": "#db2e4e",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary-fixed": "#191c1d",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#eff3ff",
+                      "on-surface-variant": "#404944",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#e6eeff",
+                      "primary": "#003527",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#dee9fd",
+                      "primary-fixed-dim": "#95d3ba",
+                      "on-tertiary-container": "#b0b2b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter-grid": "1.5rem",
+                      "stack-lg": "2rem",
+                      "margin-page": "2rem",
+                      "stack-md": "1rem",
+                      "stack-sm": "0.5rem"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>body {
+    font-family: "Hanken Grotesk", sans-serif
+    }
+.watermark-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBxsUtZV7MqZpE8oPoJEqvM8sST5ZrKM3obN6-hG-ChFiPZXxULDUSZpE0M8VpTzSsYLT7l5gM0k4YGIdmPTKX5Lx3NxJjJrXGSK8Qg5my9BxSuamNFS3SrU1m-88gIJtMUjOumMy7FkrQlHJngnOS_8DEuELIemONWBXA3t-UNFy15XiPRufhGKaasrxuNChOqfnqtRu3a-fXadxZoDS9ZSPANTb7r2cukGJgXaE4HFIObDxm4RUZq69OIjXVcmG995WKgWKQWziM);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.03;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none
+    }</style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen overflow-x-hidden flex flex-col md:flex-row">
+<div class="watermark-bg" data-alt="A subtle, monochromatic civic mural showing abstract representations of citizens, governance buildings, and interconnected lines. The style is minimalist line art, designed to be very faint and unobtrusive as a background watermark in a professional civic application. Soft, clean light mode aesthetic."></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant bg-surface flex justify-between items-center px-margin-page h-16 w-full mx-auto md:hidden shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">Jonomot</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col gap-stack-md p-6 bg-surface-container fixed left-0 top-0 h-screen w-72 z-40">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Jonomot Civic Logo" class="w-10 h-10 rounded-full object-cover" data-alt="A clean, minimalist logo icon for a civic engagement app, featuring abstract intersecting hands or speech bubbles in deep forest green and soft white. Flat vector style, highly professional and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgEobgB3wOd9u7dzE2q5-cehyP6o7t-8VxaXayUaEZWu3nc8arQxReju4joT_v6PQ3lntFx6937WPiNwGS7EooRF6LzZCqHceBNLfEZucw0Hxi-UX0MJR_7VqAz0hciihf_dHHH31sLeLcwAfT7f6jpfsc8MySFN5HUAlm2eVhDECvb2bwXUMzKA5ubJVw89nWnC9KOoaT2khIHCjtRaG0IdS3zor-V_KkoQiRA_JFCmzQ4OLt51XvaRid56SbEQqIKe-seuj7518"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-black text-primary">Jonomot</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Civic Transparency</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab -->
+<a class="bg-primary text-on-primary rounded-lg px-4 py-3 flex items-center gap-3 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dynamic_feed</span>
+<span class="font-label-sm text-label-sm">Public Feed</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">leaderboard</span>
+<span class="font-label-sm text-label-sm">Leaderboard</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">assignment</span>
+<span class="font-label-sm text-label-sm">Reports</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 flex items-center gap-3 hover:bg-surface-variant transition-all rounded-lg active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container rounded-lg px-4 py-3 mt-auto font-label-sm text-label-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+            নতুন রিপোর্ট
+        </button>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow md:ml-[280px] pt-20 pb-24 md:py-8 px-4 md:px-8 max-w-5xl mx-auto w-full relative z-10">
+<!-- Desktop Header & Search -->
+<div class="hidden md:flex justify-between items-center mb-8 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">পাবলিক ফিড</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">নাগরিকদের সাম্প্রতিক রিপোর্টসমূহ</p>
+</div>
+<div class="flex-grow max-w-md relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant rounded-full font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-on-surface placeholder-outline-variant" placeholder="প্রতিষ্ঠান বা বিষয় খুঁজুন..." type="text"/>
+</div>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-3 right-3 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+<!-- Feed Content -->
+<div class="flex flex-col gap-6">
+<!-- Report Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold">
+                            RA
+                        </div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface">Rahim A.</h3>
+<p class="text-xs text-on-surface-variant">২ ঘণ্টা আগে</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-error-container text-on-error-container border border-on-error-container/20">
+                        Bribery
+                    </span>
+</div>
+<div class="mb-3">
+<h4 class="font-headline-md text-headline-md text-primary mb-1">Dhaka Medical College Hospital</h4>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Dhaka, Bangladesh</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 leading-relaxed">
+                    আজ সকালে জরুরি বিভাগে রোগী ভর্তির জন্য ট্রলিম্যান ২০০ টাকা দাবি করে। টাকা না দিলে ট্রলি দিতে অস্বীকৃতি জানায়। হাসপাতাল কর্তৃপক্ষের দৃষ্টি আকর্ষণ করছি, এই অনিয়ম বন্ধ করা হোক।
+                </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/30">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">thumb_up</span>
+<span class="font-label-sm text-label-sm">সমর্থন (৪৫)</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="font-label-sm text-label-sm">শেয়ার</span>
+</button>
+</div>
+</article>
+<!-- Report Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover" data-alt="A professional headshot of a middle-aged South Asian woman, neutral expression, wearing subtle traditional attire, against a clean light background. Corporate modern lighting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrZG37xgyAtGQ93IAf_irQH6aNJ8bLzj8Btn0PNYCqh86HAJcwxIA_d0BWRA71BnsezlO-6zcIZYD37VzsDxqUOgXjVNeptsSgx2ejv5bocxIViuXM2dEe2HHAXe9G6MD75CWktIQc0HjvDqgbhOx3HRiQGTqlwP4-n9OeCkkAK0q_2OLIXR_4DrYKo-Ha0Nl43A_ELXosDbqQEjmIhEyQOud5vZVR7EcDick-WWlOlBif2QdzEaSCJJaWPpDR3G0F5MfwhvXmi7M"/>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface">Nusrat J.</h3>
+<p class="text-xs text-on-surface-variant">৫ ঘণ্টা আগে</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-container text-on-secondary-container border border-secondary-container/20">
+                        Harassment
+                    </span>
+</div>
+<div class="mb-3">
+<h4 class="font-headline-md text-headline-md text-primary mb-1">BRTA Mirpur Office</h4>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Mirpur, Dhaka</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 leading-relaxed">
+                    ড্রাইভিং লাইসেন্স নবায়নের জন্য গেলে দালাল চক্র চরমভাবে হয়রানি করে। সাধারণ লাইনে দাঁড়ালে কাজ এগোয় না, অথচ দালালদের মাধ্যমে গেলে দ্রুত হয়ে যায়। এই অব্যবস্থাপনার প্রতিকার চাই।
+                </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/30">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<span class="font-label-sm text-label-sm">সমর্থন (১১২)</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="font-label-sm text-label-sm">শেয়ার</span>
+</button>
+</div>
+</article>
+<!-- Report Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow opacity-75">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm font-bold">
+                            KB
+                        </div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface">Kamal B.</h3>
+<p class="text-xs text-on-surface-variant">গতকাল</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-variant text-on-surface-variant border border-outline-variant">
+                        Service Delay
+                    </span>
+</div>
+<div class="mb-3">
+<h4 class="font-headline-md text-headline-md text-primary mb-1">WASA Regional Office</h4>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Banani, Dhaka</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-6 leading-relaxed line-clamp-2">
+                    গত এক সপ্তাহ ধরে আমাদের এলাকায় পানির তীব্র সংকট। অভিযোগ জানানোর পরও কোন ব্যবস্থা নেওয়া হয়নি। দ্রুত সমাধান প্রয়োজন।
+                </p>
+<div class="flex items-center gap-4 pt-4 border-t border-outline-variant/30">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">thumb_up</span>
+<span class="font-label-sm text-label-sm">সমর্থন (১২)</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="font-label-sm text-label-sm">শেয়ার</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden flex justify-around items-center w-full px-4 py-3 pb-safe fixed bottom-0 w-full z-50 rounded-t-xl border-t border-outline-variant bg-surface shadow-md">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dynamic_feed</span>
+<span class="font-label-sm text-label-sm mt-1">ফিড</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">leaderboard</span>
+<span class="font-label-sm text-label-sm mt-1">লিডারবোর্ড</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">assignment</span>
+<span class="font-label-sm text-label-sm mt-1">রিপোর্ট</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant active:scale-90 transition-transform duration-150 rounded-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-sm text-label-sm mt-1">প্রোফাইল</span>
+</a>
+</nav>
+</body></html>
