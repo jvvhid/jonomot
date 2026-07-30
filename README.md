@@ -3,6 +3,31 @@
 
 A modern, responsive civic transparency web application built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Prisma (with SQLite for local development)** later implemented using supabase for authentication and cloudinary for video and picture storage. Designed using the **Stitch** design system.
 
+## The Motivation
+
+Every year, millions of Bangladeshi citizens visit government offices — BRTA for driving licenses, passport offices, land registration, hospitals, police stations, city corporations. The experience is often frustrating: unexplained delays, unclear document requirements, middlemen (দালাল) who charge fees for things that should be free, and no way to know if an office is actually functioning well before you show up.
+
+There is no centralized, citizen-owned platform where regular people can:
+- Check what documents they actually need before visiting
+- Read honest experiences from other citizens who went recently
+- See which offices are performing well and which are not
+- Report corruption, rude behavior, or praise helpful staff
+- Hold institutions publicly accountable with real data
+
+**Jonomot fixes this.**
+
+## What is Jonomot?
+
+Jonomot is a civic transparency web app where citizens rate, review, and report on their experiences at Bangladesh's government institutions. Think of it as a "reddit reviews for sorkari offices" — but purpose-built for civic accountability.
+
+No AI. No machine learning. No fancy algorithms. Just real citizens sharing real experiences, with a transparent scoring formula anyone can verify.
+
+---
+
+## What Can You Do With Jonomot?
+
+With Jonomot, you can look up any government office in Bangladesh — a BRTA office, a passport office, a hospital, a police station — and instantly see how other citizens rated their experience there. You can read their stories, find out if bribery or long queues are common, and check a community-built list of exactly which documents you need to bring before you go. If you've visited an office yourself, you can submit your own report — rate the service, tag what happened (bribe, rude staff, helpful staff), attach photos or video as evidence, and share tips so the next person doesn't make the same mistakes. Every report feeds into a public scorecard and leaderboard that ranks institutions by citizen satisfaction, so good offices get recognized and bad ones can't hide. Moderators review flagged content to keep things honest, and anyone can add a new government office that isn't listed yet. The whole point is simple: give ordinary citizens a voice, make public services visible, and create pressure for things to get better.
+
 ---
 
 ## 🚀 Quick Start Guide
